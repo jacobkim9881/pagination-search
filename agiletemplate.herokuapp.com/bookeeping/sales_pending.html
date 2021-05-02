@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from agiletemplate.herokuapp.com/bookeeping/sales_pending by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Apr 2021 17:00:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard | Agile - Bootstrap 4 Web Application</title>
+    <meta name="description" content="Responsive, Bootstrap, BS4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="../assets/line-awesome/css/line-awesome.min.css">
+<link rel="stylesheet" href="../assets/css/i-con.css" type="text/css" />
+<link rel="stylesheet" href="../assets/css/theme.css" type="text/css" />
+<link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+<link rel="stylesheet" href="../assets/css/font-style.css" type="text/css" />
+<link rel="stylesheet" href="../assets/css/bootstrap-select.css" type="text/css" />
+<link rel="stylesheet" href="../assets/flaticon2/flaticon.css" type="text/css" />
+<link rel="stylesheet" href="../libs/dropzone/dist/min/dropzone.min.css" />
+<link rel="stylesheet" href="../assets/css/custom.css" />
+<link rel="stylesheet" href="../assets/css/email.multiple.css">
+<link rel="stylesheet" href="../../pro.fontawesome.com/releases/v5.10.0/css/all.css">
+<link rel="stylesheet" type="text/css" href="../../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="../../fonts.googleapis.com/css5d2a.css?family=Lato">
+<link rel="stylesheet" href="../assets/foundation/foundation-datepicker.min.css">
+<link rel="stylesheet" href="../libs/select2/dist/css/select2.min.css" /></head>
+
+<body class="layout-column">
+    <header id="header" class="page-header bg-white box-shadow sticky">
+    <div class="navbar navbar-expand-lg">
+        <a class="d-lg-none px-1" data-toggle="modal" data-target="#aside" id="sidenav">
+            <i class="i-con i-con-menu text-muted"></i>
+        </a>
+        <img src="../assets/img/logo/System-logo.svg" width="208px" alt="">
+        <div class="collapse navbar-collapse order-2 order-lg-1" id="navbarToggler">
+            <form class="input-group m-2 my-lg-0 i-con-h-a bg-white d-flex flex-nowrap" id="search-bar">
+                <span class="input-group-prepend">
+                    <button type="button" class="btn no-shadow no-bg px-0">
+                        <i class="i-con i-con-search text-fade w-16"></i>
+                    </button>
+                </span>
+                <input type="text" class="form-control no-border no-shadow typeahead"
+                       placeholder="Search inventory, suppliers, invoice, receipt, customers, employees, etc…"
+                       data-plugin="typeahead" id="search-text" style="padding-left: 2.5rem">
+            </form>
+        </div>
+
+        <ul class="nav navbar-menu order-1 order-lg-2">
+
+            <li class="nav-item d-none d-sm-block">
+                <a class="nav-link px-2 i-con-h-a" data-plugin="screenfull" data-toggle="tooltip"
+                   data-title="Fullscreen">
+                    <i class="i-con i-con-fullscreen"></i>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" data-toggle="dropdown"
+                   class="nav-link d-flex align-items-center py-0 px-lg-0 px-2 text-color">
+                        <span class=" mx-2 d-none l-h-1x d-lg-block text-right">
+                            <small class='text-fade d-block mb-1'>Good evening,</small>
+                            <span>Justin Timber</span>
+                        </span>
+                    <div class="avatar w-36 bg-primary-lt">
+                        JT
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right w py-0 mt-3 animate fadeIn">
+                    <a class="py-3 dropdown-item animation-icon d-flex align-items-center"
+                       href="../account/general.html">
+                        <div>
+                            <img src="../assets/img/animated-icons/settings/settings.svg">
+                        </div>
+                        <span class="ml-2">My account</span>
+                    </a>
+                    <a class="py-3 dropdown-item animation-icon d-flex align-items-center" href="../login.html">
+                        <div>
+                            <img src="../assets/img/animated-icons/sign-out/sign-out.svg">
+                        </div>
+                        <span class="ml-2">Sign out</span>
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item d-lg-none">
+                <a href="#" class="nav-link i-con-h-a px-1" data-toggle="collapse" data-toggle-class
+                   data-target="#navbarToggler">
+                    <i class="i-con i-con-nav text-muted"><i></i></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+    <div id="main" class="layout-row flex">
+        <div id="aside" class="page-sidenav no-shrink  nav-expand" aria-hidden="true" style="width: 15rem">
+    <div class="sidenav h-100 modal-dialog bg-white box-shadow" data-nav>
+        <div class="flex scroll-container">
+            <div class="nav-border b-primary mt-3">
+                <ul class="nav bg">
+                    <li id="dashboard_nav" class="main-nav">
+                        <a href="../dashboard.html" class="animation-icon">
+                                    <span class="nav-icon">
+                                        <div>
+                                            <img src="../assets/img/animated-icons/home/home.svg"
+                                                 class="stop import-icon-check" alt="">
+                                            <img src="../assets/img/animated-icons/home/home_200_transparent.gif" class="play" alt="">
+                                        </div>
+                                    </span>
+                            <span class="nav-text">DASHBOARD</span>
+                        </a>
+                    </li>
+                    <li id="products_nav" class="main-nav">
+                        <a  class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/tags/tags.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/tags/tags_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">PRODUCTS</span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="products_all">
+                                <a href="../products/products.html">
+                                    <span class="nav-text">All Products</span>
+                                </a>
+                            </li>
+                            <li id="products_categories">
+                                <a href="../products/categories.html" class="">
+                                    <span class="nav-text">Categories</span>
+                                </a>
+                            </li>
+                            <li id="products_modifiers">
+                                <a href="../products/modifiers.html" class="">
+                                    <span class="nav-text">Modifiers</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="inventory_nav" class="main-nav">
+                        <a class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/list/list.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/list/list_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">INVENTORY</span>
+                            <span class="nav-badge">
+                                <b class="badge badge-sm badge-pill ">12</b>
+                            </span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="inventory_purchase">
+                                <a href="../inventory/purchase.html">
+                                    <span class="nav-text">Purchase Orders</span>
+                                </a>
+                            </li>
+                            <li id="inventory_transfer">
+                                <a href="../inventory/transfer.html" class="">
+                                    <span class="nav-text">Transfer Orders</span>
+                                    <span class="nav-badge">
+                                        <b class="badge badge-sm badge-pill bg-danger">12</b>
+                                    </span>
+                                </a>
+                            </li>
+                            <li id="inventory_stock">
+                                <a href="../inventory/stock.html" class="">
+                                    <span class="nav-text">Stock Adjustment</span>
+                                </a>
+                            </li>
+                            <li id="inventory_counts">
+                                <a href="../inventory/counts.html" class="">
+                                    <span class="nav-text">Inventory Counts</span>
+                                </a>
+                            </li>
+                            <li id="inventory_history">
+                                <a href="../inventory/history_all.html" class="">
+                                    <span class="nav-text">Inventory History</span>
+                                </a>
+                            </li>
+                            <li id="inventory_valuation">
+                                <a href="../inventory/valuation_all.html" class="">
+                                    <span class="nav-text">Inventory Valuation</span>
+                                </a>
+                            </li>
+                            <li id="inventory_planner">
+                                <a href="../inventory/planner_all.html" class="">
+                                    <span class="nav-text">Inventory Planner</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="productions_nav" class="main-nav">
+                        <a href="../productions/empty.html" class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/gears/gears.svg"
+                                            class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/gears/gears_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">PRODUCTIONS</span>
+                            <span class="nav-badge"></span>
+                        </a>
+                    </li>
+                    <li id="discounts_nav" class="main-nav">
+                        <a class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/discount/discount.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/discount/discount_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">DISCOUNTS</span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="discount_code">
+                                <a href="../discount/code.html">
+                                    <span class="nav-text">Discount Code</span>
+                                </a>
+                            </li>
+                            <li id="discount_auto">
+                                <a href="../discount/automatic.html" class="">
+                                    <span class="nav-text">Automatic Discounts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="suppliers_nav" class="main-nav">
+                        <a href="../suppliers/empty.html" class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/business-network/business-network.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/business-network/business-network_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">SUPPLIERS</span>
+                        </a>
+                    </li>
+                    <li id="customers_nav" class="main-nav">
+                        <a href="../customers.html" class="i-con-h-a">
+                                    <span class="nav-icon">
+                                        <i class='i-con i-con-user'><i></i></i>
+                                    </span>
+                            <span class="nav-text">CUSTOMERS</span>
+                        </a>
+                    </li>
+                    <li id="employees_nav" class="main-nav">
+                        <a  class="i-con-h-a">
+                                    <span class="nav-icon">
+                                        <i class='i-con i-con-users'><i></i></i>
+                                    </span>
+                            <span class="nav-text">EMPLOYEES</span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="employee_all">
+                                <a href="../employee/all.html">
+                                    <span class="nav-text">All Employees</span>
+                                </a>
+                            </li>
+                            <li id="employee_role">
+                                <a href="../employee/role.html" class="">
+                                    <span class="nav-text">Roles/Access Rights</span>
+                                </a>
+                            </li>
+                            <li id="employee_schedule">
+                                <a href="../employee/schedule.html" class="">
+                                    <span class="nav-text">Schedule Timesheet</span>
+                                </a>
+                            </li>
+                            <li id="employee_payroll">
+                                <a href="../employee/payroll.html" class="">
+                                    <span class="nav-text">Payroll</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="bookeeping_nav" class="main-nav">
+                        <a  class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/calculator/calculator.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/calculator/calculator_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">BOOKEEPING</span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="bookeeping_sales">
+                                <a href="sales.html">
+                                    <span class="nav-text">Sales</span>
+                                </a>
+                            </li>
+                            <li id="bookeeping_expenses">
+                                <a href="expenses.html">
+                                    <span class="nav-text">Expenses</span>
+                                </a>
+                            </li>
+                            <li id="bookeeping_vat">
+                                <a href="vat_all.html" class="">
+                                    <span class="nav-text">VAT Overview</span>
+                                </a>
+                            </li>
+                            <li id="bookeeping_account">
+                                <a href="account_cash_lbp_empty.html" class="">
+                                    <span class="nav-text">Accounts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="reports_nav" class="main-nav">
+                        <a href="../report.html" class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/combo-chart/combo-chart.svg"
+                                         class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/combo-chart/combo-chart_200_transparent.gif"
+                                         class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">REPORTS</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="no-shrink ">
+            <div class="nav-border b-primary">
+                <ul class="nav bg">
+                    <li id="settings_nav">
+                        <a href="../settings/general.html" class="animation-icon">
+                                    <span class="nav-icon">
+                                        <div>
+                                            <img src="../assets/img/animated-icons/gear/gear.svg"
+                                                 class="stop import-icon-check" alt="">
+                                            <img src="../assets/img/animated-icons/gear/gear_200_transparent.gif" class="play" alt="">
+                                        </div>
+                                    </span>
+                            <span class="nav-text">SETTINGS</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-sm p-3 mt-5">
+                <div class="hidden-folded text-sm">
+                    <div class="text-muted text-center"><small class="text-muted">v1.01.1</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>        <div id="content" class="flex">
+            <div data-plugin="notie">
+                <div class="d-none" id="ghost">
+                    <a href="sales_all.html" class="all-link ajax"></a>
+                    <a href="sales_pending.html" class="pending-link ajax"></a>
+                    <a href="sales_paid.html" class="paid-link ajax"></a>
+                    <a href="../products/products_print.html" class="print-link ajax"></a>
+                    <a class="any-link ajax"></a>
+                    <span class="title-item-name"></span>
+                    <span class="back-url"></span>
+                </div>
+                <div class="padding">
+                    <div class="mb-3">
+                        <a class="i-con-h-a ajax text-muted" href="sales_all.html" id="pjax-back-link">
+                            <i class="i-con i-con-left back-link"></i>
+                            <span class="back-link">Sales</span></a>
+                        <div class="col-12 padding-title pl-0">
+                            <span class="h3" id="title">#SO1008</span>
+                        </div>
+                        <div class="col-md-4 col-12 pl-0 pt-2 mb-3 d-flex justify-content-between align-items-center">
+                            <span class="text-muted">Created on Apr 15, 2020 at 9:32 pm</span>
+                            <span class="badge badge-md bg-warning-lt" style="font-size: 12px;">Pending</span>
+                        </div>
+                    </div>
+                    <div class="row px-3 pb-5">
+                        
+                        <div class="col-md-4 col-12 pl-0">
+                            <div id="location-card" class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12 form-group d-flex justify-content-between">
+                                            <h4>Location</h4>
+                                        </div>
+                                        <div id="location-select-div" class="col-12 form-group mb-0">
+                                            <label>Store</label>
+                                            <select id="select-location" style="width: 100%; height: 30px;" class="form-control" data-plugin="select2" data-option="{}"
+                                                    data-placeholder="Select store">
+                                                <option></option>
+                                                <option>East Side Location</option>
+                                                <option>West Side Location</option>
+                                                <option>South Side Location</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="customer-card" class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12 form-group d-flex justify-content-between">
+                                            <h4>Find customer</h4>
+                                        </div>
+                                        <div id="customer-select-div" class="col-12 form-group mb-0">
+                                            <label>Customer name</label>
+                                            <select id="select-customer" style="width: 100%; height: 30px;" class="form-control" data-plugin="select2" data-option="{}"
+                                                    data-placeholder="Select customer">
+                                                    <option></option>
+                                                    <option>Ricky Bobby</option>
+                                                    <option>Alfredo Frenendez</option>
+                                                    <option>Jack Russoe</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="tax-card" class="card">
+                                <div class="card-body">
+                                    <h4>Taxes</h4>
+                                    <span class="text-muted">Select tax group if applicable</span>
+                                    <div class="row mt-4">
+                                        <div class="col-12 d-flex justify-content-between py-2 align-items-center">
+                                            <div class="d-flex flex-column">
+                                                <span class="text-black font-weight-bold">Tax Name(11%)</span>
+                                                <span class="description text-secondary"><b>11% </b> VAT is inclusive of total cost</span>
+                                            </div>
+                                            <span>
+                                                <label class="ui-switch ui-switch-md">
+                                                    <input type="checkbox" id="ckb-tax1" checked>
+                                                    <i></i>
+                                                </label>
+                                            </span>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-between py-2 align-items-center">
+                                            <div class="d-flex flex-column">
+                                                <span class="font-weight-bold">Tax Name 2 (10%)</span>
+                                                <span class="description text-secondary text-muted"><b>10% </b> VAT added to total</span>
+                                            </div>
+                                            <span>
+                                                <label class="ui-switch ui-switch-md">
+                                                    <input type="checkbox" id="ckb-tax2">
+                                                    <i></i>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <h4>Payment details</h4>
+                                        </div>
+                                        <div class="col-12 form-group">
+                                            <label>Payment date</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control payment-date">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">
+                                                        <i class="i-con i-con-calendar"><i></i></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 form-group">
+                                            <label>Select payment method</label>
+                                            <select id="select-destination" style="width: 100%;" class="custom-select" data-plugin="select2" data-option="{}"
+                                                    data-placeholder="How will the customer pay for this?">
+                                                <option></option>
+                                                <option>Cash (LBP)</option>
+                                                <option>Check (LBP)</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 form-group">
+                                            <label>Deposit to</label>
+                                            <select id="select-destination" style="width: 100%;" class="custom-select" data-plugin="select2" data-option="{}"
+                                                    data-placeholder="Select deposit account">
+                                                <option></option>
+                                                <option>Cash (LBP)</option>
+                                                <option>Cash (USD)</option>
+                                                <option>Bank (LBP)</option>
+                                                <option>Bank (USD)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                    <div class="col-12 form-group">
+                                        <h4>Notes</h4>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label for="">Voice note</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control ref-number" placeholder="Press & hold to record">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary">Rec</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group mb-0">
+                                        <textarea style="height: 200px" class="form-control notes" placeholder="Notes"></textarea>
+                                        <span class="float-right"><span class="length">0</span> / 500</span>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="col-md-8 col-12 px-0">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <h4>
+                                            Products
+                                            </h4>
+                                            <span class="text-muted">Enter the products and quantities you would like to sell.</span>
+                                        </div>
+                                        <div id="products-div" class="col-12">
+                                            <table class="table table-borderless" data-plugin="bootstrapTable" id="products-table"
+                                                data-mobile-responsive="true">
+                                                <thead>
+                                                    <tr style="border-bottom: 1px solid #edeff2">
+                                                        <th>Products</th>
+                                                        <th style="width: 100px" class="text-right">Price</th>
+                                                        <th style="width: 75px" class="text-right">Quantity</th>
+                                                        <th style="width: 100px" class="text-right">Amount</th>
+                                                        <th style="width: 35px"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="table-row-border">
+                                                    <tr>
+                                                        <td>
+                                                            <b>Taanayel Laban 500g</b><br>
+                                                            <span class="text-muted product-info">SKU 23623 | 7457437585 | VAT 11%</span>
+                                                        </td>
+                                                        <td class="text-right">L£ 4,000</td>
+                                                        <td class="text-right">
+                                                            <input type="text" class="form-control number-format quantity weight text-right" value="10" aria-label="quantity" aria-describedby="basic-addon2">
+                                                        </td>
+                                                        <td class="text-right"><span class="text-right">L£<span class="amount pl-1">400,000</span></span></td>
+                                                        <td class="text-right">
+                                                            <a class="text-danger delete-composite i-con-h-a">
+                                                            <i class="i-con i-con-trash"><i></i></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            <b>Second Laban 500g</b><br>
+                                                            <span class="text-muted product-info">SKU 23516 | 9285728329</span>
+                                                        </td>
+                                                        <td class="text-right">L£ 4,000</td>
+                                                        <td class="text-right">
+                                                            <input type="text" class="form-control number-format quantity weight text-right" value="10" aria-label="quantity" aria-describedby="basic-addon2">
+                                                        </td>
+                                                        <td class="text-right"><span class="text-right">L£<span class="amount pl-1">400,000</span></span></td>
+                                                        <td class="text-right">
+                                                            <a class="text-danger delete-composite i-con-h-a">
+                                                            <i class="i-con i-con-trash"><i></i></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            <b>Third Laban 500g</b><br>
+                                                            <span class="text-muted product-info">SKU 20385 | 1068493058 | VAT 11%</span>
+                                                        </td>
+                                                        <td class="text-right">L£ 4,000</td>
+                                                        <td class="text-right">
+                                                            <input type="text" class="form-control number-format quantity weight text-right" value="10" aria-label="quantity" aria-describedby="basic-addon2">
+                                                        </td>
+                                                        <td class="text-right"><span class="text-right">L£<span class="amount pl-1">400,000</span></span></td>
+                                                        <td class="text-right">
+                                                            <a class="text-danger delete-composite i-con-h-a">
+                                                            <i class="i-con i-con-trash"><i></i></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div id="search-div">
+                                                <div class="input-group row ml-1 w-100">
+                                                    <div class="input-group m-2 my-lg-0 i-con-h-a bg-white d-flex flex-nowrap">
+                                                        <span class="input-group-prepend">
+                                                            <button type="button" class="btn no-shadow no-bg px-0">
+                                                                <i class="i-con i-con-search text-fade w-16"></i>
+                                                            </button>
+                                                        </span>
+                                                        <input type="text" class="form-control po_typeahead"
+                                                            placeholder="Search & Add Products"
+                                                            data-plugin="typeahead" id="search-product-text" selectItem="onSelect($event, input)" style="padding-left: 2.5rem;">
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <table class="table table-borderless mb-0" data-plugin="bootstrapTable" id="total-table"
+                                                data-mobile-responsive="true">
+                                                <tbody>
+                                                    <tr style="border-bottom: solid 1px #00000008 !important;">
+                                                        <td class="text-right"><b>Subtotal</b></td>
+                                                        <td style="width: 20%" class="text-right">
+                                                            <span class="currency-type">L£</span>
+                                                            <span id="subtotal-value"> 840,000</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border-bottom: solid 1px #00000008 !important;">
+                                                        <td class="text-right"><b>Subject to VAT</b></td>
+                                                        <td style="width: 20%" class="text-right">
+                                                            <span class="currency-type">L£</span>
+                                                            <span id="subject-value"> 440,000</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border-bottom: solid 1px #00000008 !important;">
+                                                        <td class="text-right"><b>VAT</b></td>
+                                                        <td style="width: 20%" class="text-right">
+                                                            <span class="currency-type">L£</span>
+                                                            <span id="vat-value"> 48,400</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <table class="table table-borderless" data-plugin="bootstrapTable" id="result_table"
+                                                data-mobile-responsive="true">
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="3">
+                                                            <div style="width: 50%" class="d-flex align-items-center float-right">
+                                                            <select class="custom-select discount-type">
+                                                                <option value="discount">Discount percent</option>
+                                                                <option value="fixed">Fixed amount</option>
+                                                            </select>
+                                                            <div class="input-group ml-2 discount-field">
+                                                                <input id="discount-percent" type="text mb-0" 
+                                                                    class="form-control text-right number-format" placeholder="0">
+                                                                <div class="input-group-append">
+                                                                    <span id="discount-amount" class="input-group-text">%</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-group ml-2 fixed-field d-none">
+                                                                <div class="input-group-prepend">
+                                                                    <span id="fixed-amount" class="input-group-text">$</span>
+                                                                </div>
+                                                                <input id="discount-fixed" type="text mb-0" 
+                                                                    class="form-control text-right number-format" placeholder="0">
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-right usd-type" style="border-top: 1px solid #80808024">
+                                                        <td class="text-right bg-secondary-lt">
+                                                            <h3>Total amount</h3>
+                                                        </td>
+                                                        <td class="bg-warning-lt">
+                                                            <span>USD @ 1,520</span><br>
+                                                            <span class="h3 text-warning">$ <span id="usd-value">584</span></span>
+                                                        </td>
+                                                        <td class="text-right bg-success-lt">
+                                                            <span>LBP</span><br>
+                                                            <span class="h3 text-success">L£ <span id="lbp-value">888,400</span></span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4>Timeline</h4>
+                                <hr class="w-100">
+                                <h5 class="time-title">TODAY</h5>
+                                <div class="timeline animates animates-fadeInUp mb-4">
+                                    <div class="tl-item active">
+                                        <div class="tl-dot ">
+                                        </div>
+                                        <div class="tl-content w-100">
+                                            <div><b>James</b> restocked 2 items at West Side Location. →</div>
+                                        </div>
+                                        <div class="tl-date text-muted text-right">just now</div>
+                                    </div>
+                                    <div class="tl-item border-bottom">
+                                        <div class="tl-dot" style="margin-bottom: -1.5rem;">
+                                        </div>
+                                        <div class="w-100 d-flex flex-wrap">
+                                            <div class="w-100 d-flex mb-2">
+                                                <div class="tl-content w-100">
+                                                    <div>
+                                                        <b>James</b> refunded L£ 10,000 in Cash <a class="expand-icon" data-toggle="collapse" data-target=".group-of-rows-1">→</a>
+                                                    </div>
+                                                </div>
+                                                <div class="tl-date text-muted text-right align-items-end">1:50 pm</div>
+                                            </div>
+                                            <table class="table table-borderless timeline-table">
+                                                <thead>
+                                                    <th class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">Order #</div></th>
+                                                    <th class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">Refunded by</div></th>
+                                                    <th class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">Reason</div></th>
+                                                    <th class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">Payment</div></th>
+                                                    <th class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">Items</div></th>
+                                                </thead>
+                                                <tbody id="table-row-border">
+                                                    <tr class="demo out collapse group-of-rows-1"> 
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">#1-1001</div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">James Jackson</div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">Purchased by Mistake</div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">Cash</div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">1 x <a class="back-link">Dairy Khoury Laban 400g</a></div></td>
+                                                    </tr>
+                                                    <tr class="demo out collapse group-of-rows-1"> 
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">1 x <a class="back-link">Dairy Khoury Laban 400g</a></div></td>
+                                                    </tr>
+                                                    <tr class="demo out collapse group-of-rows-1"> 
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">1 x <a class="back-link">Dairy Khoury Laban 400g</a></div></td>
+                                                    </tr>
+                                                    <tr class="demo out collapse group-of-rows-1"> 
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">1 x <a class="back-link">Dairy Khoury Laban 400g</a></div></td>
+                                                    </tr>
+                                                    <tr class="demo out collapse group-of-rows-1"> 
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1">1 x <a class="back-link">Dairy Khoury Laban 400g</a></div></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="tl-item">
+                                        <div class="tl-dot mt-4">
+                                        </div>
+                                        <div class="w-100 d-flex flex-wrap">
+                                            <div class="w-100 d-flex mb-2">
+                                                <div class="tl-content w-100">
+                                                    <h5>YESTERDAY</h5>
+                                                    <div class="mt-2">
+                                                        You restocked 3 items at West Side Location Location. <a class="expand-icon" data-toggle="collapse" data-target=".group-of-rows-2">→</a>
+                                                    </div>
+                                                </div>
+                                                <div class="tl-date text-muted text-right align-items-end" style="display: grid">2:00 pm</div>
+                                            </div>
+                                            <table class="table table-borderless timeline-table">
+                                                <thead>
+                                                    <th class="subrow-dark hiddenRow"><div class="collapse group-of-rows-2">Location</div></th>
+                                                    <th class="subrow-dark hiddenRow"><div class="collapse group-of-rows-2">Items</div></th>
+                                                </thead>
+                                                <tbody id="table-row-border">
+                                                    <tr class="demo out collapse group-of-rows-2"> 
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-2">West Side Location</div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-2">1 x <a class="back-link">Dairy Khoury Laban 400g</a></div></td>
+                                                    </tr>
+                                                    <tr class="demo out collapse group-of-rows-2"> 
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-2"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-2">1 x <a class="back-link">Dairy Khoury Laban 400g</a></div></td>
+                                                    </tr>
+                                                    <tr class="demo out collapse group-of-rows-2"> 
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-2"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-2">1 x <a class="back-link">Dairy Khoury Laban 400g</a></div></td>
+                                                    </tr>
+                                                    <tr class="demo out collapse group-of-rows-2"> 
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-2"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-2">1 x <a class="back-link">Dairy Khoury Laban 400g</a></div></td>
+                                                    </tr>
+                                                    <tr class="demo out collapse group-of-rows-2"> 
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-2"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-2">1 x <a class="back-link">Dairy Khoury Laban 400g</a></div></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="tl-item border-bottom">
+                                        <div class="tl-dot" style="margin-bottom: -1.5rem;">
+                                        </div>
+                                        <div class="tl-content w-100">
+                                            <div class="">
+                                                You refunded L£12,000 in Cash. →
+                                            </div>
+                                        </div>
+                                        <div class="tl-date text-muted text-right">1:50 pm</div>
+                                    </div>
+                                    <div class="tl-item">
+                                        <div class="tl-dot mt-4">
+                                        </div>
+                                        <div class="w-100 d-flex flex-wrap">
+                                            <div class="w-100 d-flex mb-2">
+                                                <div class="tl-content w-100">
+                                                    <h5>APRIL 5</h5>
+                                                    <div class="mt-2">
+                                                        A L£45,000 Cash payment was processed. →
+                                                    </div>
+                                                </div>
+                                                <div class="tl-date text-muted text-right align-items-end" style="display: grid">2:00 pm</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tl-item">
+                                        <div class="tl-dot">
+                                        </div>
+                                        <div class="tl-content w-100">
+                                            <div class="">
+                                                12 items were deducted from West Side Location inventory. →
+                                            </div>
+                                        </div>
+                                        <div class="tl-date text-muted text-right">1:50 pm</div>
+                                    </div>
+                                    <div class="tl-item">
+                                        <div class="tl-dot">
+                                        </div>
+                                        <div class="tl-content w-100">
+                                            <div class="">
+                                                <b>Mike</b> processed this order on POS. →
+                                            </div>
+                                        </div>
+                                        <div class="tl-date text-muted text-right">2:00 pm</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div>
+                </div>
+                <div id="leave-modal" class="modal fade" data-backdrop="true" data-dismiss="modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title">You have unsaved changes</h5>
+                            </div>
+                            <div class="modal-body p-lg">
+                                <p>
+                                    If you cancel, all unsaved changes will be lost
+                                </p>
+                            </div>
+                            <div class="modal-footer border-0">
+                                <button type="button" class="btn btn-secondary"
+                                    data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-danger continue"
+                                    data-dismiss="modal">Continue</a>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                </div>
+                <div id="page-leave-modal" class="modal fade" data-backdrop="true" data-dismiss="modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title">You have unsaved changes</h5>
+                            </div>
+                            <div class="modal-body p-lg">
+                                <p>
+                                    If you leave this page, all unsaved changes will be lost
+                                </p>
+                            </div>
+                            <div class="modal-footer border-0">
+                                <button type="button" class="btn btn-secondary"
+                                    data-dismiss="modal">Cancel</button>
+                                <button class="btn btn-danger leave" data-dismiss="modal">Leave page</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                </div>
+                <div id="customer-add-modal" class="modal fade" data-backdrop="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header border-0 d-block">
+                                <div class="row">
+                                    <div class="col-12">
+                                    <h5 class="modal-title">Customer quick add</h5>
+                                    <p class="d-flex justify-content-between">
+                                        <span>Enter customer's basic information</span>
+                                        <span>Custom no: 5280002</span>
+                                    </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label>Select account type</label>
+                                        <div class="d-flex">
+                                            <div class="form-group">
+                                            <label class="md-check mr-5">
+                                                <input type="radio" name="account-type" value="c" checked>
+                                                <i class="blue"></i>
+                                                Customer
+                                            </label>
+                                            </div>
+                                            <div class="form-group">
+                                            <label class="md-check mr-2">
+                                                <input type="radio" name="account-type" value="b">
+                                                <i class="blue"></i>
+                                                Business
+                                            </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group business-item d-none">
+                                        <label for="">VAT ID Number</label>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                    <div class="col-12 form-group business-item d-none">
+                                        <label for="">Company name</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">First name</label>
+                                        <input type="text" class="form-control" placeholder="James">
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Last name</label>
+                                        <input type="text" class="form-control" placeholder="Nakhleh">
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Mobile</label>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Email</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="">Customer ID</label>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div>
+                </div>
+                <div id="send-email-modal" class="modal fade" data-backdrop="true" data-dismiss="modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title">Send receipt by email</h5>
+                            </div>
+                            <div class="modal-body p-lg">
+                            <div class="row">
+                                <div class="col-12 form-group">
+                                    <label for="">From</label>
+                                    <input type="email" class="form-control" placeholder="main@email.com">
+                                </div>
+                                <div class="col-12 form-group">
+                                    <label for="">To</label>
+                                    <input type="email" class="form-control" placeholder="default.email@mail.com">
+                                </div>
+                                <div class="col-12 form-group">
+                                    <label for="">Subject</label>
+                                    <input type="text" class="form-control" placeholder="(#SO1001) Receipt from Store Name">
+                                </div>
+                                <div class="col-12 form-group">
+                                    <label for="">Attachment</label>
+                                    <p>
+                                        <i class="la la-file"></i>
+                                        #SO1001
+                                    </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="modal-footer border-0">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-success send" data-dismiss="modal">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+                <div id="share-whatsapp-modal" class="modal fade" data-backdrop="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title">Share with WhatsApp</h5>
+                            </div>
+                            <div class="modal-body p-lg">
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <label for="">Customer mobile</label>
+                                        <input type="number" class="form-control" placeholder="03 124 938">
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label for="">Message to customer</label>
+                                        <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Dear First Last,
+
+Here's your receipt! We appreciate your loyalty.
+
+Thanks for your business!
+Sultan Bakery
+
+You can view the full receipt here - #SO1007"></textarea>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label for="">Attachment</label>
+                                        <p>
+                                            <i class="la la-file"></i>
+                                            #SO1001
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-0">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-success send">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="delete-sale-modal" class="modal fade" data-backdrop="true" data-dismiss="modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title">Delete sale</h5>
+                            </div>
+                            <div class="modal-body p-lg">
+                                <p>
+                                    Are you sure you want to delete <b>#SO1001</b>?<br>
+                                    By deleting, the sale will not be accounted in reports.
+                                </p>
+                                <p><b>This can’t be undone.<b></p>
+                            </div>
+                            <div class="modal-footer border-0" data-dismiss="modal">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-danger confirm" data-dismiss="modal">Delete sale</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery -->
+<script src="../libs/jquery/dist/jquery.min.js"></script>
+<script src="../../code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script src="../libs/select2/dist/js/select2.min.js"></script>
+<script src="../assets/js/plugins/select2.js"></script>
+<script src="../assets/foundation/foundation-datepicker.js"></script>
+<script src="../assets/js/bootstrap-select.js"></script>
+<!-- Bootstrap -->
+<script src="../libs/popper.js/dist/umd/popper.min.js"></script>
+<script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- ajax page -->
+<script src="../libs/pace-progress/pace.min.js"></script>
+<script src="../libs/pjax/pjax.js"></script>
+<script src="../assets/js/ajax.js"></script>
+<!-- lazyload plugin -->
+<script src="../assets/js/lazyload.config.js"></script>
+<script src="../assets/js/lazyload.js"></script>
+<script src="../assets/js/plugin.js"></script>
+<!-- theme -->
+<script src="../assets/js/autoNumeric-1.8.3.js"></script>
+<script src="../assets/js/theme.js"></script>
+<!-- dropzone -->
+
+<script src="../libs/dropzone/dist/min/dropzone.min.js"></script>
+<script src="../libs/bootstrap-table/dist/bootstrap-table.min.js"></script>
+<script src="../libs/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile.min.js"></script>
+<script src="../libs/bootstrap-table/dist/extensions/export/bootstrap-table-export.min.js"></script>
+<script src="../assets/js/plugins/tableExport.min.js"></script>
+
+<script src="../assets/js/jquery.email.multiple.js"></script>
+<script src="../assets/js/input-mask.js"></script>
+<script src="../assets/js/common.js"></script>
+<script type="text/javascript" src="../../cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="../../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).on('click', '.nav-text', (e) => {
+        let cur_el = e.target,
+            parent_li = $(cur_el).closest('li');        
+        if(parent_li.hasClass('main-nav')) {
+            $(".nav li").removeClass("active"); //Remove any "active" class 
+        }      
+
+        
+    });
+    $(document).ready(function () {
+        if($(window).width() < 768)
+        {
+            $('#search-text').attr("placeholder", "Search ...");
+            $('#search-bar').css("padding-left", "0px");
+            $('#search-text').css("width", "200px");
+        }
+        else
+        {
+            $('#search-text').attr("placeholder", "Search inventory, suppliers, invoice, receipt, customers, employees, etc…");
+            $('#search-bar').css("padding-left", "40px");
+            $('#search-text').css("width", "500px");
+        }
+        $('#products_nav').click(function() {
+
+        });
+    });
+    $(window).resize(function() {
+        if($(window).width() < 768)
+        {
+            $('#search-text').attr("placeholder", "Search ...");
+            $('#search-bar').css("padding-left", "0px");
+            $('#search-text').css("width", "200px");
+        }
+        else
+        {
+            $('#search-text').attr("placeholder", "Search inventory, suppliers, invoice, receipt, customers, employees, etc…");
+            $('#search-bar').css("padding-left", "40px");
+            $('#search-text').css("width", "500px");
+        }
+    });
+</script>    <footer class="d-none">
+        <div class="row footer-row animate fade fadeInUp">
+            <div class="w-100 d-flex justify-content-between">
+                <div class="d-flex align-items-center col">
+                    <div class="saved-status d-flex">
+                        <div class="item-action dropdown">
+                            <button data-toggle="dropdown" class="btn btn-secondary send mr-1">Send<i class="la la-angle-up ml-2"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                <a class="dropdown-item supplier-dropdwon text-right" data-toggle="modal" data-target="#send-email-modal">Send by email</a>
+                                <a class="dropdown-item supplier-dropdwon text-right" data-toggle="modal" data-target="#share-whatsapp-modal">Share with WhatsApp</a>
+                            </div>
+                        </div>
+                        <div class="item-action dropdown">
+                            <button data-toggle="dropdown" class="btn btn-secondary mr-1">
+                                More
+                                <i class="la la-angle-up ml-2"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                <a class="dropdown-item supplier-dropdwon text-right">Save as PDF</a>
+                                <a class="dropdown-item supplier-dropdwon text-right">Save as CSV</a>
+                                <a class="dropdown-item supplier-dropdwon text-right print-label">Print labels</a>
+                            </div>
+                        </div>
+                        <button class="btn btn-danger delete-sale mr-1" data-toggle="modal" data-target="#delete-sale-modal">Delete sale</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn btn-secondary cancel mr-1">Cancel</button>
+                    <button class="btn btn-success footer-save">Mark as paid</button>
+                    <button class="save d-none"></button>
+                </div>
+            </div>
+        </div>
+        <style>
+            table tbody>tr {
+                cursor: default;
+            }
+            table tbody>tr:hover {
+                background-color: transparent !important;
+            }
+            .time-title {
+                margin-left: 30px;
+            }
+            .timeline-table {
+                margin-bottom: 0 !important;
+            }
+            .timeline-table tr {
+                line-height: 35px;
+            }
+            .hiddenRow {
+                padding: 0 !important;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+                document.title = "Bookeeping | Sales New";
+                $(".nav-sub li").removeClass("active");
+                $(".nav li ").removeClass("active"); //Remove any "active" class 
+                $('#bookeeping_nav').addClass('active');
+                $('#bookeeping_sales').addClass('active');
+            });
+        </script>
+        <script src="../assets/js/office/bookeeping.sales.progress.js"></script>
+    </footer>
+</body>
+
+
+<!-- Mirrored from agiletemplate.herokuapp.com/bookeeping/sales_pending by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Apr 2021 17:00:11 GMT -->
+</html>

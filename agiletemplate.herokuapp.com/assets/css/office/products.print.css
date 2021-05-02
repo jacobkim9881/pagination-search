@@ -1,0 +1,50 @@
+table tr:last-child {
+    border-bottom: solid 1px #00000008 !important;
+}
+
+.print-item {
+    border-bottom: 1px solid #00000008;
+}
+
+.bg-dark {
+    color: #2b3035 !important;
+}
+
+.no-shadow {
+    margin-left: 10px;
+}
+
+.twitter-typeahead .dropdown-menu {
+    width: 100%;
+}
+
+.product_item {
+    cursor: pointer;
+}
+
+table tr {
+    cursor: default;
+}
+
+.sticky-back-link {
+    position: sticky;
+    top: 92px;
+}
+
+.sticky-title {
+    position: sticky;
+    top: 125px !important;
+}
+
+.sticky-aside {
+    position: sticky;
+    top: 175px !important;
+}
+
+#add-supplier-modal tr{
+    cursor: pointer !important;
+}
+
+#add-category-modal tr{
+    cursor: pointer !important;
+}

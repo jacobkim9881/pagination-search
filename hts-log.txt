@@ -1,0 +1,31 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 29 Apr 2021 09:43:40 at http://agiletemplate.herokuapp.com +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Pns2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://agiletemplate.herokuapp.com -O1 "C:\My Web Sites\SBO" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+09:43:41	Warning: 	Found for agiletemplate.herokuapp.com/
+09:43:41	Warning: 	File has moved from agiletemplate.herokuapp.com/ to http://agiletemplate.herokuapp.com/login
+09:54:52	Warning: 	Retry after error -4 (Connect Error) at link localhost:8000/assets/img/animated-icons/business-network/business-network.svg (from agiletemplate.herokuapp.com/inventory/history_all)
+09:55:45	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/discount/automatic_ (from agiletemplate.herokuapp.com/discount/automatic)
+09:59:52	Warning: 	Retry after error -4 (Connect Error) at link localhost:8000/assets/img/animated-icons/business-network/business-network.svg (from agiletemplate.herokuapp.com/inventory/history_all)
+09:59:53	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/inventory_history (from agiletemplate.herokuapp.com/products/products_edit)
+10:00:00	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/bookeeping/expense_payment (from agiletemplate.herokuapp.com/suppliers/all)
+10:00:03	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/employee/payroll_all (from agiletemplate.herokuapp.com/employee/payroll_profile)
+10:00:34	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/assets/js/office/setting.custom.js (from agiletemplate.herokuapp.com/settings/period)
+10:00:54	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/inventory/transfer_intransit (from agiletemplate.herokuapp.com/inventory/transfer_intransit_nbillable)
+10:00:54	Error: 	"Connect Error" (-4) after 2 retries at link localhost:8000/assets/img/animated-icons/business-network/business-network.svg (from agiletemplate.herokuapp.com/inventory/history_all)
+10:00:56	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/bookeeping/expense/bill (from agiletemplate.herokuapp.com/suppliers/profile)
+10:00:56	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/bookeeping/expenses/payment (from agiletemplate.herokuapp.com/suppliers/profile)
+10:00:58	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/bookeeping/expenses_payment_details_pending (from agiletemplate.herokuapp.com/bookeeping/expenses_all)
+10:00:58	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/bookeeping/expenses_payment_details_paid (from agiletemplate.herokuapp.com/bookeeping/expenses_all)
+10:00:58	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/bookeeping/expenses_credit_details_pending (from agiletemplate.herokuapp.com/bookeeping/expenses_all)
+10:00:58	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/bookeeping/expenses_credit_details_paid (from agiletemplate.herokuapp.com/bookeeping/expenses_all)
+10:01:01	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/reports/sale_payment (from agiletemplate.herokuapp.com/discount/code_edit)
+10:01:01	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/customers/profile (from agiletemplate.herokuapp.com/customers/edit/regular)
+10:01:05	Error: 	"Not Found" (404) at link agiletemplate.herokuapp.com/settings/reports.sale.payment.html (from agiletemplate.herokuapp.com/settings/loyalty_edit)
+
+HTTrack Website Copier/3.49-2 mirror complete in 17 minutes 25 seconds : 445 links scanned, 424 files written (55652948 bytes overall) [49260544 bytes received at 47139 bytes/sec], 9131205 bytes transferred using HTTP compression in 13 files, ratio 27%, 4.1 requests per connection
+(16 errors, 4 warnings, 0 messages)

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from agiletemplate.herokuapp.com/settings/posDevices_edit by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Apr 2021 17:00:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard | Agile - Bootstrap 4 Web Application</title>
+    <meta name="description" content="Responsive, Bootstrap, BS4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="../assets/line-awesome/css/line-awesome.min.css">
+<link rel="stylesheet" href="../assets/css/i-con.css" type="text/css" />
+<link rel="stylesheet" href="../assets/css/theme.css" type="text/css" />
+<link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+<link rel="stylesheet" href="../assets/css/font-style.css" type="text/css" />
+<link rel="stylesheet" href="../assets/css/bootstrap-select.css" type="text/css" />
+<link rel="stylesheet" href="../assets/flaticon2/flaticon.css" type="text/css" />
+<link rel="stylesheet" href="../libs/dropzone/dist/min/dropzone.min.css" />
+<link rel="stylesheet" href="../assets/css/custom.css" />
+<link rel="stylesheet" href="../assets/css/email.multiple.css">
+<link rel="stylesheet" href="../../pro.fontawesome.com/releases/v5.10.0/css/all.css">
+<link rel="stylesheet" type="text/css" href="../../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="../../fonts.googleapis.com/css5d2a.css?family=Lato">
+<link rel="stylesheet" href="../assets/foundation/foundation-datepicker.min.css">
+<link rel="stylesheet" href="../libs/select2/dist/css/select2.min.css" /></head>
+
+<body class="layout-column">
+    <header id="header" class="page-header bg-white box-shadow sticky">
+    <div class="navbar navbar-expand-lg">
+        <a class="d-lg-none px-1" data-toggle="modal" data-target="#aside" id="sidenav">
+            <i class="i-con i-con-menu text-muted"></i>
+        </a>
+        <img src="../assets/img/logo/System-logo.svg" width="208px" alt="">
+        <div class="collapse navbar-collapse order-2 order-lg-1" id="navbarToggler">
+            <form class="input-group m-2 my-lg-0 i-con-h-a bg-white d-flex flex-nowrap" id="search-bar">
+                <span class="input-group-prepend">
+                    <button type="button" class="btn no-shadow no-bg px-0">
+                        <i class="i-con i-con-search text-fade w-16"></i>
+                    </button>
+                </span>
+                <input type="text" class="form-control no-border no-shadow typeahead"
+                       placeholder="Search inventory, suppliers, invoice, receipt, customers, employees, etc…"
+                       data-plugin="typeahead" id="search-text" style="padding-left: 2.5rem">
+            </form>
+        </div>
+
+        <ul class="nav navbar-menu order-1 order-lg-2">
+
+            <li class="nav-item d-none d-sm-block">
+                <a class="nav-link px-2 i-con-h-a" data-plugin="screenfull" data-toggle="tooltip"
+                   data-title="Fullscreen">
+                    <i class="i-con i-con-fullscreen"></i>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" data-toggle="dropdown"
+                   class="nav-link d-flex align-items-center py-0 px-lg-0 px-2 text-color">
+                        <span class=" mx-2 d-none l-h-1x d-lg-block text-right">
+                            <small class='text-fade d-block mb-1'>Good evening,</small>
+                            <span>Justin Timber</span>
+                        </span>
+                    <div class="avatar w-36 bg-primary-lt">
+                        JT
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right w py-0 mt-3 animate fadeIn">
+                    <a class="py-3 dropdown-item animation-icon d-flex align-items-center"
+                       href="../account/general.html">
+                        <div>
+                            <img src="../assets/img/animated-icons/settings/settings.svg">
+                        </div>
+                        <span class="ml-2">My account</span>
+                    </a>
+                    <a class="py-3 dropdown-item animation-icon d-flex align-items-center" href="../login.html">
+                        <div>
+                            <img src="../assets/img/animated-icons/sign-out/sign-out.svg">
+                        </div>
+                        <span class="ml-2">Sign out</span>
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item d-lg-none">
+                <a href="#" class="nav-link i-con-h-a px-1" data-toggle="collapse" data-toggle-class
+                   data-target="#navbarToggler">
+                    <i class="i-con i-con-nav text-muted"><i></i></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+    <div id="main" class="layout-row flex">
+        <div id="aside" class="page-sidenav no-shrink  nav-expand" aria-hidden="true" style="width: 15rem">
+    <div class="sidenav h-100 modal-dialog bg-white box-shadow" data-nav>
+        <div class="flex scroll-container">
+            <div class="nav-border b-primary mt-3">
+                <ul class="nav bg">
+                    <li id="dashboard_nav" class="main-nav">
+                        <a href="../dashboard.html" class="animation-icon">
+                                    <span class="nav-icon">
+                                        <div>
+                                            <img src="../assets/img/animated-icons/home/home.svg"
+                                                 class="stop import-icon-check" alt="">
+                                            <img src="../assets/img/animated-icons/home/home_200_transparent.gif" class="play" alt="">
+                                        </div>
+                                    </span>
+                            <span class="nav-text">DASHBOARD</span>
+                        </a>
+                    </li>
+                    <li id="products_nav" class="main-nav">
+                        <a  class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/tags/tags.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/tags/tags_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">PRODUCTS</span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="products_all">
+                                <a href="../products/products.html">
+                                    <span class="nav-text">All Products</span>
+                                </a>
+                            </li>
+                            <li id="products_categories">
+                                <a href="../products/categories.html" class="">
+                                    <span class="nav-text">Categories</span>
+                                </a>
+                            </li>
+                            <li id="products_modifiers">
+                                <a href="../products/modifiers.html" class="">
+                                    <span class="nav-text">Modifiers</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="inventory_nav" class="main-nav">
+                        <a class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/list/list.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/list/list_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">INVENTORY</span>
+                            <span class="nav-badge">
+                                <b class="badge badge-sm badge-pill ">12</b>
+                            </span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="inventory_purchase">
+                                <a href="../inventory/purchase.html">
+                                    <span class="nav-text">Purchase Orders</span>
+                                </a>
+                            </li>
+                            <li id="inventory_transfer">
+                                <a href="../inventory/transfer.html" class="">
+                                    <span class="nav-text">Transfer Orders</span>
+                                    <span class="nav-badge">
+                                        <b class="badge badge-sm badge-pill bg-danger">12</b>
+                                    </span>
+                                </a>
+                            </li>
+                            <li id="inventory_stock">
+                                <a href="../inventory/stock.html" class="">
+                                    <span class="nav-text">Stock Adjustment</span>
+                                </a>
+                            </li>
+                            <li id="inventory_counts">
+                                <a href="../inventory/counts.html" class="">
+                                    <span class="nav-text">Inventory Counts</span>
+                                </a>
+                            </li>
+                            <li id="inventory_history">
+                                <a href="../inventory/history_all.html" class="">
+                                    <span class="nav-text">Inventory History</span>
+                                </a>
+                            </li>
+                            <li id="inventory_valuation">
+                                <a href="../inventory/valuation_all.html" class="">
+                                    <span class="nav-text">Inventory Valuation</span>
+                                </a>
+                            </li>
+                            <li id="inventory_planner">
+                                <a href="../inventory/planner_all.html" class="">
+                                    <span class="nav-text">Inventory Planner</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="productions_nav" class="main-nav">
+                        <a href="../productions/empty.html" class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/gears/gears.svg"
+                                            class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/gears/gears_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">PRODUCTIONS</span>
+                            <span class="nav-badge"></span>
+                        </a>
+                    </li>
+                    <li id="discounts_nav" class="main-nav">
+                        <a class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/discount/discount.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/discount/discount_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">DISCOUNTS</span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="discount_code">
+                                <a href="../discount/code.html">
+                                    <span class="nav-text">Discount Code</span>
+                                </a>
+                            </li>
+                            <li id="discount_auto">
+                                <a href="../discount/automatic.html" class="">
+                                    <span class="nav-text">Automatic Discounts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="suppliers_nav" class="main-nav">
+                        <a href="../suppliers/empty.html" class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/business-network/business-network.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/business-network/business-network_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">SUPPLIERS</span>
+                        </a>
+                    </li>
+                    <li id="customers_nav" class="main-nav">
+                        <a href="../customers.html" class="i-con-h-a">
+                                    <span class="nav-icon">
+                                        <i class='i-con i-con-user'><i></i></i>
+                                    </span>
+                            <span class="nav-text">CUSTOMERS</span>
+                        </a>
+                    </li>
+                    <li id="employees_nav" class="main-nav">
+                        <a  class="i-con-h-a">
+                                    <span class="nav-icon">
+                                        <i class='i-con i-con-users'><i></i></i>
+                                    </span>
+                            <span class="nav-text">EMPLOYEES</span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="employee_all">
+                                <a href="../employee/all.html">
+                                    <span class="nav-text">All Employees</span>
+                                </a>
+                            </li>
+                            <li id="employee_role">
+                                <a href="../employee/role.html" class="">
+                                    <span class="nav-text">Roles/Access Rights</span>
+                                </a>
+                            </li>
+                            <li id="employee_schedule">
+                                <a href="../employee/schedule.html" class="">
+                                    <span class="nav-text">Schedule Timesheet</span>
+                                </a>
+                            </li>
+                            <li id="employee_payroll">
+                                <a href="../employee/payroll.html" class="">
+                                    <span class="nav-text">Payroll</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="bookeeping_nav" class="main-nav">
+                        <a  class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/calculator/calculator.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/calculator/calculator_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">BOOKEEPING</span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="bookeeping_sales">
+                                <a href="../bookeeping/sales.html">
+                                    <span class="nav-text">Sales</span>
+                                </a>
+                            </li>
+                            <li id="bookeeping_expenses">
+                                <a href="../bookeeping/expenses.html">
+                                    <span class="nav-text">Expenses</span>
+                                </a>
+                            </li>
+                            <li id="bookeeping_vat">
+                                <a href="../bookeeping/vat_all.html" class="">
+                                    <span class="nav-text">VAT Overview</span>
+                                </a>
+                            </li>
+                            <li id="bookeeping_account">
+                                <a href="../bookeeping/account_cash_lbp_empty.html" class="">
+                                    <span class="nav-text">Accounts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="reports_nav" class="main-nav">
+                        <a href="../report.html" class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/combo-chart/combo-chart.svg"
+                                         class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/combo-chart/combo-chart_200_transparent.gif"
+                                         class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">REPORTS</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="no-shrink ">
+            <div class="nav-border b-primary">
+                <ul class="nav bg">
+                    <li id="settings_nav">
+                        <a href="general.html" class="animation-icon">
+                                    <span class="nav-icon">
+                                        <div>
+                                            <img src="../assets/img/animated-icons/gear/gear.svg"
+                                                 class="stop import-icon-check" alt="">
+                                            <img src="../assets/img/animated-icons/gear/gear_200_transparent.gif" class="play" alt="">
+                                        </div>
+                                    </span>
+                            <span class="nav-text">SETTINGS</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-sm p-3 mt-5">
+                <div class="hidden-folded text-sm">
+                    <div class="text-muted text-center"><small class="text-muted">v1.01.1</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>        <!-- ############ Content START-->
+        <div id="content" class="flex" data-plugin="notie">
+            <!-- ############ Main START-->
+            <div class="flex">
+                <div class="padding">
+                    <div class="row sticky-title" style="height: initial;" id="sub-title">
+                        <div style="width: 275px" class="pl-3">
+                            <h2 class="mb-4 d-flex justify-content-between">
+                                Settings
+                            </h2>
+                        </div>
+                        <div class="col d-flex justify-content-end align-items-center mb-5">
+                            <button data-toggle="modal" data-target="#content-aside" class="btn btn-sm btn-white d-md-none i-con-h-a ml-2" id="btn-aside">
+                                <i class="i-con i-con-nav text-muted"><i></i></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="aside aside-sm pl-3 navbar-setting-collapsed" id="content-aside" style="width: 275px;max-height: calc(100vh - 230px);display: none;" aria-hidden="true">
+    <div class="card setting-menu modal-dialog scroll-container" style="width:-moz-available;">
+        <div class="list list-row" data-sub-nav>
+            <a href="general.html" class="list-item border-top-0 subnav-link" id="set_general_nav">
+                <span>
+                    <div>
+                        <img src="../assets/img/animated-icons/gear/gear.svg"
+                            class="stop import-icon-check" alt="">
+                        <img src="../assets/img/animated-icons/gear/gear_200_transparent.gif"
+                            class="play d-none" alt="">
+                    </div>
+                </span>
+                <span class="h5">
+                    General<br>
+                    <small>View and update yout store details</small>
+                </span>
+            </a>
+            <a href="location.html" class="list-item border-top-0 animation-icon subnav-link" id="set_location_nav">
+                <span>
+                    <img src="../assets/img/animated-icons/address/address.svg"
+                        class="stop import-icon-check" alt="">
+                    <img src="../assets/img/animated-icons/address/address_200_transparent.gif" class="play"
+                        alt="">
+                </span>
+                <span class="h5">
+                    Locations<br>
+                    <small>Manage places you stock and sell products</small>
+                </span>
+            </a>
+            <a href="payment.html" class="list-item border-top-0 animation-icon subnav-link" id="set_payment_nav">
+                <span>
+                    <img src="../assets/img/animated-icons/money/money.svg"
+                        class="stop import-icon-check" alt="">
+                    <img src="../assets/img/animated-icons/money/money_200_transparent.gif" class="play" alt="">
+                </span>
+                <span class="h5">
+                    Payment types<br>
+                    <small>Enable and manage your payment options</small>
+                </span>
+            </a>
+            <a href="notification.html" class="list-item border-top-0 animation-icon subnav-link" id="set_notification_nav">
+                <span>
+                    <img src="../assets/img/animated-icons/bell/bell.svg"
+                        class="stop import-icon-check" alt="">
+                    <img src="../assets/img/animated-icons/bell/bell_200_transparent.gif" class="play" alt="">
+                </span>
+                <span class="h5">
+                    Notifications<br>
+                    <small>Manage all system notifications</small>
+                </span>
+            </a>
+            <a href="cash.html" class="list-item border-top-0 animation-icon subnav-link" id="set_cash_nav">
+                <span>
+                    <img src="../assets/img/animated-icons/coins/coins.svg"
+                        class="stop import-icon-check" alt="">
+                    <img src="../assets/img/animated-icons/coins/coins_200_transparent.gif" class="play" alt="">
+                </span>
+                <span class="h5">
+                    Cash rounding<br>
+                    <small>Set total amount to round to nearest interval</small>
+                </span>
+            </a>
+            <a href="period.html" class="list-item border-top-0 animation-icon subnav-link" id="set_period_nav">
+                <span>
+                    <img src="../assets/img/animated-icons/alarm-clock/alarm-clock.svg"
+                        class="stop import-icon-check" alt="">
+                    <img src="../assets/img/animated-icons/alarm-clock/alarm-clock_200_transparent.gif"
+                        class="play" alt="">
+                </span>
+                <span class="h5">
+                    Period of service<br>
+                    <small>Set your store’s hours of operation</small>
+                </span>
+            </a>
+            <a href="tax.html" class="list-item border-top-0 animation-icon subnav-link" id="set_tax_nav">
+                <span>
+                    <img src="../assets/img/animated-icons/hand-scissors/hand-scissors.svg"
+                        class="stop import-icon-check" alt="">
+                    <img src="../assets/img/animated-icons/hand-scissors/hand-scissors_200_transparent.gif"
+                        class="play" alt="">
+                </span>
+                <span class="h5">
+                    Taxes<br>
+                    <small>Manage how your store charges taxes</small>
+                </span>
+            </a>
+            <a href="receipt.html" class="list-item border-top-0 animation-icon subnav-link" id="set_receipt_nav">
+                <span>
+                    <img src="../assets/img/animated-icons/receipt/receipt.svg"
+                        class="stop import-icon-check" alt="">
+                    <img src="../assets/img/animated-icons/receipt/receipt_200_transparent.gif" class="play"
+                        alt="">
+                </span>
+                <span class="h5">
+                    Receipts<br>
+                    <small>Manage printed receipts design</small>
+                </span>
+            </a>
+            <a href="loyalty.html" class="list-item border-top-0 animation-icon subnav-link" id="set_loyalty_nav">
+                <span>
+                    <img src="../assets/img/animated-icons/prize/prize.svg"
+                        class="stop import-icon-check" alt="">
+                    <img src="../assets/img/animated-icons/prize/prize_200_transparent.gif" class="play" alt="">
+                </span>
+                <span class="h5">
+                    Loyalty<br>
+                    <small>Enable loyalty points and percent credited</small>
+                </span>
+            </a>
+            <a href="posDevices.html" class="list-item border-top-0 animation-icon subnav-link" id="set_posDevices_nav">
+                <span>
+                    <img src="../assets/img/animated-icons/computer-display/computer-display.svg"
+                        class="stop import-icon-check" alt="">
+                    <img src="../assets/img/animated-icons/computer-display/computer-display_200_transparent.gif"
+                        class="play" alt="">
+                </span>
+                <span class="h5">
+                    POS devices<br>
+                    <small>Manage your POS devices</small>
+                </span>
+            </a>
+            <a href="posEditor.html"
+                class="list-item border-top-0 animation-icon subnav-link" id="set_posEditor_nav">
+                <span>
+                    <img src="../assets/img/animated-icons/poseditor/poseditor.svg"
+                        class="stop import-icon-check" alt="">
+                    <img src="../assets/img/animated-icons/poseditor/poseditor_200_transparent.gif" class="play"
+                        alt="">
+                </span>
+                <span class="h5">
+                    POS editor<br>
+                    <small>Edit featured list</small>
+                </span>
+            </a>
+            <a href="backup.html" class="list-item border-top-0 animation-icon subnav-link" id="set_backup_nav">
+                <span>
+                    <img src="../assets/img/animated-icons/restore-window/restore-window.svg"
+                        class="stop import-icon-check" alt="">
+                    <img src="../assets/img/animated-icons/restore-window/restore-window_200_transparent.gif"
+                        class="play" alt="">
+                </span>
+                <span class="h5">
+                    Backup and restore<br>
+                    <small>Setup store data backup or restore past data</small>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>                        <div class="col mb-5" style="overflow-x: hidden;" id="content-body">
+                            <div>
+                                <div class="d-none" id="ghost">
+                                    <a class="any-link ajax"></a>
+                                    <a class="all-link ajax" href="posDevices.html"></a>
+                                </div>
+                                <div class="mb-3">
+                                    <a class="i-con-h-a back text-muted" href="posDevices.html">
+                                        <i class="i-con i-con-left back-link"></i>
+                                        <span class="back-link">POS devices</span>
+                                    </a>
+                                    <h3 class="padding-title" id="title">Add POS device</h3>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card mb-0">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-12 pb-4">
+                                                        <span class="h5">POS details</span><br>
+                                                    </div>
+                                                    <div class="col-8 form-group">
+                                                        <label>POS name</label>
+                                                        <input type="text" id="pos-name" placeholder="e.g. Cashier 1"
+                                                               class="form-control">
+                                                    </div>
+                                                    <div class="col-4 form-group">
+                                                        <label>POS type</label>
+                                                        <select id="pos-type" class="custom-select">
+                                                            <option>Tag POS</option>
+                                                            <option>Cashier</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12 form-group">
+                                                        <label>Store</label>
+                                                        <select id="pos-store" class="custom-select">
+                                                            <option>West Side Location</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                        <label>Access</label>
+                                                        <select id="pos-address" class="custom-select">
+                                                            <option>All Categories</option>
+                                                            <option>Catering</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                        <label>Auto-lock</label>
+                                                        <select id="auto-lock" class="custom-select">
+                                                            <option>Never</option>
+                                                            <option>30 seconds</option>
+                                                            <option>1 minute</option>
+                                                            <option>2 minutes</option>
+                                                            <option>3 minutes</option>
+                                                            <option>4 minutes</option>
+                                                            <option>5 minutes</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12 form-group">
+                                                        <label>Featured page</label>
+                                                        <select id="pos-featuredPage" class="custom-select">
+                                                            <option value="0">Dynamic</option>
+                                                            <option value="1">Featured 1</option>
+                                                            <option value="2">Holiday</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12 d-flex justify-content-center parent-page">
+                                                        <div class="form-group featured-page-table button-card d-none align-items-center">
+                                                            <div class="mt-2 w-100 h-100"
+                                                                style="font-size: 0.5rem; padding:1rem; background:#FBFBFD; border-radius: 8px !important; box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2) !important;">
+                                                                <div class="btn-group w-100 h-25 align-items-center">
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1 d-flex"><span style="margin:auto;">Pita</span></div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1 d-flex"><span style="margin:auto;">Pineapple Juice</span></div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                </div>
+                                                                <div class="btn-group w-100 h-25 align-items-center">
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                </div>
+                                                                <div class="btn-group w-100 h-25 align-items-center">
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                </div>
+                                                                <div class="btn-group w-100 h-25 align-items-center">
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                    <div style="width:18%; height: 80%;" class="mx-1 mb-1">&nbsp;</div>
+                                                                </div>
+                                                            </div>    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="delete-modal" class="modal fade" data-backdrop="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header border-0">
+                                                <h5 class="modal-title">Delete POS device</h5>
+                                            </div>
+                                            <div class="modal-body p-lg">
+                                                <p>
+                                                    Are you sure you want to delete <span class='device-name'> <b>
+                                                                Cashier 1</b> </span>?<br> The POS will be deactivated on
+                                                    the device assigned to this POS.
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer border-0">
+                                                <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-danger continue"
+                                                        data-dismiss="modal">Delete POS</button>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                </div>
+                                <div id="leave-modal" class="modal fade" data-backdrop="true" data-dismiss="modal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header border-0">
+                                                <h5 class="modal-title">You have unsaved changes</h5>
+                                            </div>
+                                            <div class="modal-body p-lg">
+                                                <p>
+                                                    If you cancel, all unsaved changes will be lost
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer border-0">
+                                                <button type="button" class="btn btn-secondary leave-cancel"
+                                                        data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-danger continue"
+                                                        data-dismiss="modal">Continue</button>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                </div>
+                                <div id="page-leave-modal" class="modal fade" data-backdrop="true" data-dismiss="modal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header border-0">
+                                                <h5 class="modal-title">You have unsaved changes</h5>
+                                            </div>
+                                            <div class="modal-body p-lg">
+                                                <p>
+                                                    If you leave this page, all unsaved changes will be lost
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer border-0">
+                                                <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Cancel</button>
+                                                <button class="btn btn-danger leave" data-dismiss="modal">Leave page</button>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery -->
+<script src="../libs/jquery/dist/jquery.min.js"></script>
+<script src="../../code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script src="../libs/select2/dist/js/select2.min.js"></script>
+<script src="../assets/js/plugins/select2.js"></script>
+<script src="../assets/foundation/foundation-datepicker.js"></script>
+<script src="../assets/js/bootstrap-select.js"></script>
+<!-- Bootstrap -->
+<script src="../libs/popper.js/dist/umd/popper.min.js"></script>
+<script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- ajax page -->
+<script src="../libs/pace-progress/pace.min.js"></script>
+<script src="../libs/pjax/pjax.js"></script>
+<script src="../assets/js/ajax.js"></script>
+<!-- lazyload plugin -->
+<script src="../assets/js/lazyload.config.js"></script>
+<script src="../assets/js/lazyload.js"></script>
+<script src="../assets/js/plugin.js"></script>
+<!-- theme -->
+<script src="../assets/js/autoNumeric-1.8.3.js"></script>
+<script src="../assets/js/theme.js"></script>
+<!-- dropzone -->
+
+<script src="../libs/dropzone/dist/min/dropzone.min.js"></script>
+<script src="../libs/bootstrap-table/dist/bootstrap-table.min.js"></script>
+<script src="../libs/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile.min.js"></script>
+<script src="../libs/bootstrap-table/dist/extensions/export/bootstrap-table-export.min.js"></script>
+<script src="../assets/js/plugins/tableExport.min.js"></script>
+
+<script src="../assets/js/jquery.email.multiple.js"></script>
+<script src="../assets/js/input-mask.js"></script>
+<script src="../assets/js/common.js"></script>
+<script type="text/javascript" src="../../cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="../../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).on('click', '.nav-text', (e) => {
+        let cur_el = e.target,
+            parent_li = $(cur_el).closest('li');        
+        if(parent_li.hasClass('main-nav')) {
+            $(".nav li").removeClass("active"); //Remove any "active" class 
+        }      
+
+        
+    });
+    $(document).ready(function () {
+        if($(window).width() < 768)
+        {
+            $('#search-text').attr("placeholder", "Search ...");
+            $('#search-bar').css("padding-left", "0px");
+            $('#search-text').css("width", "200px");
+        }
+        else
+        {
+            $('#search-text').attr("placeholder", "Search inventory, suppliers, invoice, receipt, customers, employees, etc…");
+            $('#search-bar').css("padding-left", "40px");
+            $('#search-text').css("width", "500px");
+        }
+        $('#products_nav').click(function() {
+
+        });
+    });
+    $(window).resize(function() {
+        if($(window).width() < 768)
+        {
+            $('#search-text').attr("placeholder", "Search ...");
+            $('#search-bar').css("padding-left", "0px");
+            $('#search-text').css("width", "200px");
+        }
+        else
+        {
+            $('#search-text').attr("placeholder", "Search inventory, suppliers, invoice, receipt, customers, employees, etc…");
+            $('#search-bar').css("padding-left", "40px");
+            $('#search-text').css("width", "500px");
+        }
+    });
+</script>    <footer class="d-none">
+        <div class="row footer-row animate fade fadeInUp">
+    <div class="w-100 d-flex justify-content-between">
+        <div class="d-flex align-items-center col">
+            <span class="text-secondary saved-status">Unsaved changes</span>
+        </div>
+        <div class="row">
+            <button class="btn btn-secondary cancel confirm mr-1">Cancel</button>
+            <button class="btn btn-danger delete mr-1">Delete</button>
+            <button class="btn btn-success save footer-save" disabled="" title="">Save</button>
+        </div>
+    </div>
+</div>        <style>
+            .btn-group div {
+                background-color: #FFFFFF;
+                border: 1px solid white ;;
+                color: black;
+                /* cursor: pointer; */
+                cursor: default;
+                float: center;
+                border-radius: 4px !important; box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2) !important;
+            }
+            .btn-group:after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .btn-group div:not(:last-child) {
+                border-right: none;
+            }
+            .btn-group div:hover {
+                background-color: #FFFFFF;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+                document.title = "Settings | Pos Devices Edit";
+                $(".nav li ").removeClass("active"); //Remove any "active" class 
+                $('#settings_nav').addClass('active');
+                $(".list-row a").removeClass("active");
+                $('#set_posDevices_nav').addClass('active');
+            });
+        </script>
+        <script src="../assets/js/input-mask.js"></script>
+        <script src="../assets/js/common.js"></script>
+        <script src="../assets/js/office/setting.pos.edit.js"></script>
+    </footer>
+</body>
+
+
+<!-- Mirrored from agiletemplate.herokuapp.com/settings/posDevices_edit by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Apr 2021 17:00:46 GMT -->
+</html>

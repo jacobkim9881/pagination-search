@@ -1,0 +1,71 @@
+.list-item {
+    cursor: pointer;
+    color: black;
+    border-right: 3px solid white !important;
+}
+
+a {
+    color: rgba(0, 0, 0, 0.637);
+}
+.gparent-category .list-item:hover div,
+.parent-category .list-item:hover div {
+    color: #137eff;
+}
+.child-category .list-item:hover div {
+    color: rgba(0, 0, 0, 0.637) !important;
+}
+
+.item-author {
+    color: rgba(0, 0, 0, 0.637);
+}
+.item-author:hover {
+    color: #137eff;
+}
+
+.list-item.active {
+    border-right: 3px solid #137eff !important;
+}
+
+.list-item.active .item-author{ 
+    color: #137eff;
+}
+
+a.dropdown-item {
+    color: white !important;
+}
+
+/*custom style*/
+.list-row .list-item,
+.list-bordered .list-item {
+    border-top: 1px solid rgba(135, 150, 165, 0.075);
+    margin-top: 0;
+}
+
+.item-author {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.item-author:hover {
+    color: #137eff !important;
+}
+
+div.item-except {
+    font-weight: 200;
+}
+.back-link:hover {
+    cursor: pointer !important;
+}
+a:not([href]):not([tabindex]) {
+    color: rgba(0, 0, 0, 0.637);
+    text-decoration: none;
+}
+.scroll {
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; 
+}
+.scroll::-webkit-scrollbar {
+    display: none; 
+}

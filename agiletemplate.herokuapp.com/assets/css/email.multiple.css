@@ -1,0 +1,37 @@
+span.email-ids {
+    float: left;
+    border: 1px solid #aaa;
+    border-color: rgba(135,150,165,.15);
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background: #f7f8fa;
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+    
+span.cancel-email {
+    display: block;
+    float: right;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 49%;
+    line-height: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.email-id-row {
+    border: 1px solid #ccc;
+}
+.email-id-row input {
+    border: 0; outline:0;
+}
+span.to-input {
+    display: block;
+    float: left;
+    padding-right: 11px;
+}
+.email-id-row {
+    padding-top: 6px;
+    padding-bottom: 7px;
+    /*margin-top: 23px;*/
+}
