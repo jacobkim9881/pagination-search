@@ -20,8 +20,8 @@ var MODULE_CONFIG = {
     '/assets/js/app/user.js'
   ],
   search: [
-    '/libs/list.js/dist/list.js',
-    '/assets/js/app/search.js'
+    prefix +    '/libs/list.js/dist/list.js',
+    prefix +    '/assets/js/app/search.js'
   ],
   invoice: [
     '/libs/list.js/dist/list.js',
@@ -82,11 +82,11 @@ var MODULE_CONFIG = {
     prefix + '/assets/js/plugins/datatable.js'
   ],
   bootstrapTable: [
-    '/libs/bootstrap-table/dist/bootstrap-table.min.js',
-    '/libs/bootstrap-table/dist/extensions/export/bootstrap-table-export.min.js',
-    '/libs/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile.min.js',
-    '/assets/js/plugins/tableExport.min.js',
-    '/assets/js/plugins/bootstrap-table.js'
+    prefix + '/libs/bootstrap-table/dist/bootstrap-table.min.js',
+    prefix + '/libs/bootstrap-table/dist/extensions/export/bootstrap-table-export.min.js',
+    prefix + '/libs/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile.min.js',
+    prefix + '/assets/js/plugins/tableExport.min.js',
+    prefix + '/assets/js/plugins/bootstrap-table.js'
   ],
   bootstrapWizard: [
     '/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js'
