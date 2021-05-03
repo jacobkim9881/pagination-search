@@ -3,11 +3,13 @@
     var return_html = ``;
     var init_load = 0;
   var init = function () {
+	  //prefix
     var engine = new Bloodhound({
       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
       queryTokenizer: Bloodhound.tokenizers.whitespace,
       prefetch: '/assets/api/menu.json'
     });
+
     $('.typeahead').removeAttr('data-plugin').typeahead('destroy').typeahead({
       classNames: {
         menu: 'dropdown-menu mt-2'
@@ -20,7 +22,7 @@
           return `
           <a class="dropdown-item" href="` + data.link + `">
             <span class="d-block font-weight-500">` + data.name + `</span>
-            <small class="text-muted">` + data.desc + `</small>
+            <small class="text-muted">` + data.sku + `</small>
           </a>`;
         }
       }
@@ -28,6 +30,25 @@
     ).on('typeahead:rendered', function (obj, datum) {
       // for ajax
       $(document).trigger('refresh');
+	    console.log(obj.target.value);
+    var engine = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      prefetch: prefix + '/assets/api/menu.json'
+    });
+engine.initialize().then(function() {
+console.log('engine init done');
+  engine.search(
+    obj.target.value,
+    function(d) {
+      console.log(d);
+    },
+    function(d) {
+      console.log(d);
+    }
+  );
+});	  
+
     });
 
 
