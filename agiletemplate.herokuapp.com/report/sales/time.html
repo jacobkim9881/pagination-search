@@ -22,8 +22,8 @@
 <link rel="stylesheet" href="../../assets/css/email.multiple.css">
 <link rel="stylesheet" href="../../../pro.fontawesome.com/releases/v5.10.0/css/all.css">
 <link rel="stylesheet" type="text/css" href="../../../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.css"/>
-<link rel="stylesheet" href="../../../fonts.googleapis.com/css5d2a.css?family=Lato">
-<link rel="stylesheet" href="../../assets/foundation/foundation-datepicker.min.css">
+<link rel="stylesheet" href="../../../fonts.googleapis.com/css5d2a.css?family=Lato" />
+<link rel="stylesheet" href="../../assets/foundation/foundation-datepicker.min.css" />
 <link rel="stylesheet" href="../../libs/select2/dist/css/select2.min.css" /></head>
 
 <body class="layout-column">
@@ -728,6 +728,24 @@
             $(document).on('click', '.allow-focus', function (e) {
                 e.stopPropagation();
             });
+	if (window.chrome) {
+	$('#dropdownMenu1').css('width', '110px');
+	$('#dropdownMenu1').css('border-radius', '0.25rem');
+	$('#dropdownMenu1').css('padding', '6px 12px');
+	$('#dropdownMenu1').css('color', '#919faa');
+	
+		$('#dropdownMenu1').hover(function() {
+	$('#dropdownMenu1').css('font-size', '0.75rem');
+	$('#dropdownMenu1').css('color', '#919faa');
+	$('#dropdownMenu1').css('width', '110px');
+	$('#dropdownMenu1').css('border-radius', '0.25rem');
+	$('#dropdownMenu1').css('padding', '6px 12px');
+
+		},
+		       	function() {
+
+		});
+	};
         </script>
     </footer>
 </body>
