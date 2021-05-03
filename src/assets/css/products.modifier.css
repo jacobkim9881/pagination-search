@@ -1,0 +1,80 @@
+/* td.td-dot {
+    padding-right: 0;
+}
+
+
+.sticky-top {
+    position: sticky;
+    top: 60px;
+    z-index: 1020;
+}
+th{
+    font-size: 1em;
+    line-height: 1.375em;
+    font-weight: 400;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.move-icon:hover {
+    cursor: grab;
+}
+.drag-item {
+    cursor: grabbing;
+    background-color: #fff;
+    box-shadow:0 5px 8px 0 rgba(0,0,0,0.2),0 5px 8px 0 rgba(0,0,0,0.19);
+}
+.list-item {
+    cursor: grab;
+} */
+
+a.a-more:hover {
+    color: #137eff !important;
+}
+
+.input-group-text {
+    padding: 0.375rem;
+}
+
+.scroll {
+overflow-y: scroll;
+overflow-x: hidden;
+}
+
+#inner-div {
+width: 100%;
+display: block;
+position: relative;
+overflow: visible;
+}
+
+.list-item {
+width: 100%;
+padding: 0.75rem 0.625rem;
+border-top: 1px solid rgba(135, 150, 165, 0.075);
+border-bottom: 1px solid rgba(135, 150, 165, 0.075);
+margin-top: -1px;
+display: block;
+cursor: grab;
+background: #fff;
+transition: box-shadow 0.1s;
+}
+
+
+.list-item:active {
+cursor: grabbing;
+}
+
+.list-item:first-child
+{
+    border-top: none;
+}
+
+.list-item:last-child
+{
+    border-bottom: none;
+}
+
+.ui-sortable-helper {
+box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.1), 0 8px 10px 0 rgba(0, 0, 0, 0.1);
+}

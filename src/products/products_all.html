@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from agiletemplate.herokuapp.com/products/products_all by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Apr 2021 16:53:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard | Agile - Bootstrap 4 Web Application</title>
+    <meta name="description" content="Responsive, Bootstrap, BS4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="../assets/line-awesome/css/line-awesome.min.css">
+<link rel="stylesheet" href="../assets/css/i-con.css" type="text/css" />
+<link rel="stylesheet" href="../assets/css/theme.css" type="text/css" />
+<link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+<link rel="stylesheet" href="../assets/css/font-style.css" type="text/css" />
+<link rel="stylesheet" href="../assets/css/bootstrap-select.css" type="text/css" />
+<link rel="stylesheet" href="../assets/flaticon2/flaticon.css" type="text/css" />
+<link rel="stylesheet" href="../libs/dropzone/dist/min/dropzone.min.css" />
+<link rel="stylesheet" href="../assets/css/custom.css" />
+<link rel="stylesheet" href="../assets/css/email.multiple.css">
+<link rel="stylesheet" href="../../pro.fontawesome.com/releases/v5.10.0/css/all.css">
+<link rel="stylesheet" type="text/css" href="../../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="../../fonts.googleapis.com/css5d2a.css?family=Lato">
+<link rel="stylesheet" href="../assets/foundation/foundation-datepicker.min.css">
+<link rel="stylesheet" href="../libs/select2/dist/css/select2.min.css" /></head>
+
+<body class="layout-column">
+    <header id="header" class="page-header bg-white box-shadow sticky">
+    <div class="navbar navbar-expand-lg">
+        <a class="d-lg-none px-1" data-toggle="modal" data-target="#aside" id="sidenav">
+            <i class="i-con i-con-menu text-muted"></i>
+        </a>
+        <img src="../assets/img/logo/System-logo.svg" width="208px" alt="">
+        <div class="collapse navbar-collapse order-2 order-lg-1" id="navbarToggler">
+            <form class="input-group m-2 my-lg-0 i-con-h-a bg-white d-flex flex-nowrap" id="search-bar">
+                <span class="input-group-prepend">
+                    <button type="button" class="btn no-shadow no-bg px-0">
+                        <i class="i-con i-con-search text-fade w-16"></i>
+                    </button>
+                </span>
+                <input type="text" class="form-control no-border no-shadow typeahead"
+                       placeholder="Search inventory, suppliers, invoice, receipt, customers, employees, etc…"
+                       data-plugin="typeahead" id="search-text" style="padding-left: 2.5rem">
+            </form>
+        </div>
+
+        <ul class="nav navbar-menu order-1 order-lg-2">
+
+            <li class="nav-item d-none d-sm-block">
+                <a class="nav-link px-2 i-con-h-a" data-plugin="screenfull" data-toggle="tooltip"
+                   data-title="Fullscreen">
+                    <i class="i-con i-con-fullscreen"></i>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" data-toggle="dropdown"
+                   class="nav-link d-flex align-items-center py-0 px-lg-0 px-2 text-color">
+                        <span class=" mx-2 d-none l-h-1x d-lg-block text-right">
+                            <small class='text-fade d-block mb-1'>Good evening,</small>
+                            <span>Justin Timber</span>
+                        </span>
+                    <div class="avatar w-36 bg-primary-lt">
+                        JT
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right w py-0 mt-3 animate fadeIn">
+                    <a class="py-3 dropdown-item animation-icon d-flex align-items-center"
+                       href="../account/general.html">
+                        <div>
+                            <img src="../assets/img/animated-icons/settings/settings.svg">
+                        </div>
+                        <span class="ml-2">My account</span>
+                    </a>
+                    <a class="py-3 dropdown-item animation-icon d-flex align-items-center" href="../login.html">
+                        <div>
+                            <img src="../assets/img/animated-icons/sign-out/sign-out.svg">
+                        </div>
+                        <span class="ml-2">Sign out</span>
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item d-lg-none">
+                <a href="#" class="nav-link i-con-h-a px-1" data-toggle="collapse" data-toggle-class
+                   data-target="#navbarToggler">
+                    <i class="i-con i-con-nav text-muted"><i></i></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+    <div id="main" class="layout-row flex">
+        <div id="aside" class="page-sidenav no-shrink  nav-expand" aria-hidden="true" style="width: 15rem">
+    <div class="sidenav h-100 modal-dialog bg-white box-shadow" data-nav>
+        <div class="flex scroll-container">
+            <div class="nav-border b-primary mt-3">
+                <ul class="nav bg">
+                    <li id="dashboard_nav" class="main-nav">
+                        <a href="../dashboard.html" class="animation-icon">
+                                    <span class="nav-icon">
+                                        <div>
+                                            <img src="../assets/img/animated-icons/home/home.svg"
+                                                 class="stop import-icon-check" alt="">
+                                            <img src="../assets/img/animated-icons/home/home_200_transparent.gif" class="play" alt="">
+                                        </div>
+                                    </span>
+                            <span class="nav-text">DASHBOARD</span>
+                        </a>
+                    </li>
+                    <li id="products_nav" class="main-nav">
+                        <a  class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/tags/tags.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/tags/tags_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">PRODUCTS</span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="products_all">
+                                <a href="products.html">
+                                    <span class="nav-text">All Products</span>
+                                </a>
+                            </li>
+                            <li id="products_categories">
+                                <a href="categories.html" class="">
+                                    <span class="nav-text">Categories</span>
+                                </a>
+                            </li>
+                            <li id="products_modifiers">
+                                <a href="modifiers.html" class="">
+                                    <span class="nav-text">Modifiers</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="inventory_nav" class="main-nav">
+                        <a class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/list/list.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/list/list_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">INVENTORY</span>
+                            <span class="nav-badge">
+                                <b class="badge badge-sm badge-pill ">12</b>
+                            </span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="inventory_purchase">
+                                <a href="../inventory/purchase.html">
+                                    <span class="nav-text">Purchase Orders</span>
+                                </a>
+                            </li>
+                            <li id="inventory_transfer">
+                                <a href="../inventory/transfer.html" class="">
+                                    <span class="nav-text">Transfer Orders</span>
+                                    <span class="nav-badge">
+                                        <b class="badge badge-sm badge-pill bg-danger">12</b>
+                                    </span>
+                                </a>
+                            </li>
+                            <li id="inventory_stock">
+                                <a href="../inventory/stock.html" class="">
+                                    <span class="nav-text">Stock Adjustment</span>
+                                </a>
+                            </li>
+                            <li id="inventory_counts">
+                                <a href="../inventory/counts.html" class="">
+                                    <span class="nav-text">Inventory Counts</span>
+                                </a>
+                            </li>
+                            <li id="inventory_history">
+                                <a href="../inventory/history_all.html" class="">
+                                    <span class="nav-text">Inventory History</span>
+                                </a>
+                            </li>
+                            <li id="inventory_valuation">
+                                <a href="../inventory/valuation_all.html" class="">
+                                    <span class="nav-text">Inventory Valuation</span>
+                                </a>
+                            </li>
+                            <li id="inventory_planner">
+                                <a href="../inventory/planner_all.html" class="">
+                                    <span class="nav-text">Inventory Planner</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="productions_nav" class="main-nav">
+                        <a href="../productions/empty.html" class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/gears/gears.svg"
+                                            class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/gears/gears_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">PRODUCTIONS</span>
+                            <span class="nav-badge"></span>
+                        </a>
+                    </li>
+                    <li id="discounts_nav" class="main-nav">
+                        <a class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/discount/discount.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/discount/discount_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">DISCOUNTS</span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="discount_code">
+                                <a href="../discount/code.html">
+                                    <span class="nav-text">Discount Code</span>
+                                </a>
+                            </li>
+                            <li id="discount_auto">
+                                <a href="../discount/automatic.html" class="">
+                                    <span class="nav-text">Automatic Discounts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="suppliers_nav" class="main-nav">
+                        <a href="../suppliers/empty.html" class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/business-network/business-network.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/business-network/business-network_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">SUPPLIERS</span>
+                        </a>
+                    </li>
+                    <li id="customers_nav" class="main-nav">
+                        <a href="../customers.html" class="i-con-h-a">
+                                    <span class="nav-icon">
+                                        <i class='i-con i-con-user'><i></i></i>
+                                    </span>
+                            <span class="nav-text">CUSTOMERS</span>
+                        </a>
+                    </li>
+                    <li id="employees_nav" class="main-nav">
+                        <a  class="i-con-h-a">
+                                    <span class="nav-icon">
+                                        <i class='i-con i-con-users'><i></i></i>
+                                    </span>
+                            <span class="nav-text">EMPLOYEES</span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="employee_all">
+                                <a href="../employee/all.html">
+                                    <span class="nav-text">All Employees</span>
+                                </a>
+                            </li>
+                            <li id="employee_role">
+                                <a href="../employee/role.html" class="">
+                                    <span class="nav-text">Roles/Access Rights</span>
+                                </a>
+                            </li>
+                            <li id="employee_schedule">
+                                <a href="../employee/schedule.html" class="">
+                                    <span class="nav-text">Schedule Timesheet</span>
+                                </a>
+                            </li>
+                            <li id="employee_payroll">
+                                <a href="../employee/payroll.html" class="">
+                                    <span class="nav-text">Payroll</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="bookeeping_nav" class="main-nav">
+                        <a  class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/calculator/calculator.svg" class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/calculator/calculator_200_transparent.gif" class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">BOOKEEPING</span>
+                            <span class="nav-caret"></span>
+                        </a>
+
+                        <ul class="nav-sub">
+                            <li id="bookeeping_sales">
+                                <a href="../bookeeping/sales.html">
+                                    <span class="nav-text">Sales</span>
+                                </a>
+                            </li>
+                            <li id="bookeeping_expenses">
+                                <a href="../bookeeping/expenses.html">
+                                    <span class="nav-text">Expenses</span>
+                                </a>
+                            </li>
+                            <li id="bookeeping_vat">
+                                <a href="../bookeeping/vat_all.html" class="">
+                                    <span class="nav-text">VAT Overview</span>
+                                </a>
+                            </li>
+                            <li id="bookeeping_account">
+                                <a href="../bookeeping/account_cash_lbp_empty.html" class="">
+                                    <span class="nav-text">Accounts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="reports_nav" class="main-nav">
+                        <a href="../report.html" class="animation-icon">
+                            <span class="nav-icon">
+                                <div>
+                                    <img src="../assets/img/animated-icons/combo-chart/combo-chart.svg"
+                                         class="stop import-icon-check" alt="">
+                                    <img src="../assets/img/animated-icons/combo-chart/combo-chart_200_transparent.gif"
+                                         class="play" alt="">
+                                </div>
+                            </span>
+                            <span class="nav-text">REPORTS</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="no-shrink ">
+            <div class="nav-border b-primary">
+                <ul class="nav bg">
+                    <li id="settings_nav">
+                        <a href="../settings/general.html" class="animation-icon">
+                                    <span class="nav-icon">
+                                        <div>
+                                            <img src="../assets/img/animated-icons/gear/gear.svg"
+                                                 class="stop import-icon-check" alt="">
+                                            <img src="../assets/img/animated-icons/gear/gear_200_transparent.gif" class="play" alt="">
+                                        </div>
+                                    </span>
+                            <span class="nav-text">SETTINGS</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-sm p-3 mt-5">
+                <div class="hidden-folded text-sm">
+                    <div class="text-muted text-center"><small class="text-muted">v1.01.1</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>        <div id="content" class="flex">
+            <div>
+                <div class="d-none" id="ghost">
+                    <a class="ajax edit-link" href="products_edit.html"></a>
+                    <a class="ajax purchase-link" href="../inventory/purchase.html"></a>
+                    <a class="ajax stock-link" href="../inventory/stock.html"></a>
+                    <a class="ajax new-link" href="products_new.html"></a>
+                    <span class="success-title-message"></span>
+                    <span class="title-item-name"></span>
+                </div>
+                <div class="padding scroll-container">
+                    <div id="index-page">
+                        <div class="row row-sm">
+                            
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="h3 mb-0">Products</span>
+                                    <div class="alert-container">
+                                        <div class="alert bg-success d-none"></div>
+                                    </div>
+                                    <a class="btn btn-md btn-primary ajax" href="products_new.html"
+                                       
+                                    >
+                                    <i class="la la-plus-circle"></i>Add product
+                                    </a>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="col-12 mb-3 d-flex">
+                                <a class="text-primary i-con-h-a mr-4" data-toggle="modal" data-target="#import-modal" id="import-start">
+                                    <i class="mr-1 i-con i-con-download"><i></i></i>
+                                    Import
+                                </a>
+                                <a class="text-primary i-con-h-a mr-4" id="export-start">
+                                    <i class="mr-1 i-con i-con-upload"><i></i></i>
+                                    Export
+                                </a>
+                                <a href="products_print.html" class="ajax print-link text-primary i-con-h-a" id="print-labels" >
+                                    <i class="mr-1 i-con i-con-layer"></i>
+                                    Print labels
+                                </a>
+                            </div>
+                            
+
+                            
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        
+                                        <div class="col-12 mb-2 d-flex justify-content-between align-items-center ">
+                                            <div class="d-flex w-100">
+                                                <div class="d-flex responsive-20 justify-content-between pl-0">
+                                                    <label class="d-flex align-items-center mb-0 mr-1">
+                                                        <img src="../../image.flaticon.com/icons/svg/2922/2922830.svg" class="icon" alt=""> Store:
+                                                    </label>
+                                                    <select class="custom-select border-0" style="width: 120px">
+                                                        <option>ALL STORES</option>
+                                                    </select>
+                                                </div>
+                                                <div class="d-flex responsive-25 justify-content-between">
+                                                    <label class="d-flex align-items-center mb-0 mr-1">
+                                                        <i class="mr-2 i-con i-con-grid"><i></i></i>
+                                                        Category:
+                                                    </label>
+                                                    <select class="custom-select border-0" style="width: 120px">
+                                                        <option>ALL ITEMS</option>
+                                                    </select>
+                                                </div>
+                                                <div class="d-flex responsive-25 justify-content-between">
+                                                    <label class="d-flex align-items-center mb-0 mr-1">
+                                                        <img src="../assets/img/animated-icons/business-network/business-network.svg" class="icon"
+                                                             alt="">
+                                                        Suppliers:
+                                                    </label>
+                                                    <select class="custom-select border-0" style="width: 150px">
+                                                        <option>ALL SUPPLIERS</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-group d-flex float-right responsive-30 pr-0">
+                                                    <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <i class="la la-search"></i>
+                                                            </span>
+                                                    </div>
+                                                    <input type="text" id="custom-search-box" placeholder="Search Products, SKU, Barcode…" class="form-control form-control-sm search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        <div class="row m-1">
+                                            <div class="col-md-8" style="min-height: 40px;">
+                                                <div class="btn-group" id="toolbar" style="display: none;">
+                                                    <button class="btn btn-white d-flex align-items-center text-primary no-hover no-shadow"
+                                                            style="cursor: default;">
+                                                        <label class="check mb-0 d-flex top-check" style="cursor: default;">
+                                                            <input type="checkbox" checked value="all" onClick='return false;'>
+                                                            <i class="blue"></i>
+                                                        </label>
+                                                        <span class="mx-1" id="selected-count"></span> selected
+                                                    </button>
+                                                    <a href="products_bulk.html" class="btn btn-white ajax">Bulk edit</a>
+                                                    <button type="button" id="btn-multi-delete" class="btn btn-white">
+                                                        <span class="text-danger">Delete</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <table class="table table-hover table-borderless" data-plugin="bootstrapTable" id="table"
+                                                    data-search="true"
+                                                    data-search-align="left"
+                                                    data-detail-view="false"
+                                                    data-mobile-responsive="true" data-pagination="true"
+                                                    data-page-list="[10, 25, 50, 100, ALL]"
+                                                    data-search-selector="">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                    </th>
+                                                    <th>
+                                                        <label class="md-check">
+                                                            <input type="checkbox" class="pt-4" id="check-all">
+                                                            <i class="blue"></i>
+                                                        </label>
+                                                    </th>
+                                                    <th>Name</th>
+                                                    <th>Supplier</th>
+                                                    <th>Category</th>
+                                                    <th class="text-right">Price</th>
+                                                    <th class="text-right">Cost</th>
+                                                    <th class="text-right">Margin</th>
+                                                    <th class="text-right">Stock</th>
+                                                    <th class="text-right"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="table-row-border" class="contain-subrow searchable">
+                                                <tr class="main-row">
+                                                    <td data-toggle="collapse" data-target=".group-of-rows-1"><i class="la la-angle-down product-collapse"></i></td>
+                                                    <td>
+                                                        <label class="md-check">
+                                                            <input type="checkbox" class="pt-4">
+                                                            <i class="blue"></i>
+                                                        </label>
+                                                    </td>
+                                                    <td><span>Taanayel Labneh</span></td>
+                                                    <td>Lebanese Food Company SARL</td>
+                                                    <td>SelfService/Dairy</td>
+                                                    <td class="text-right"></td>
+                                                    <td class="text-right"></td>
+                                                    <td class="text-right"></td>
+                                                    <td class="text-right"><span class="text-warning">34</span></td>
+                                                    <td class="text-right">
+                                                        <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                        <i class="i-con i-con-more"><i></i></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                        <a class="dropdown-item edit">
+                                                            <i class="la la-pen"></i>
+                                                            Edit Product
+                                                        </a>
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item create-order">
+                                                            <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                            class="icon reverse-icon" alt="">
+                                                            Create purchase order
+                                                        </a>
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item stock-adjust">
+                                                            <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                            alt="">
+                                                            Create Stock adjustment
+                                                        </a>
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item duplicate-product">
+                                                            <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                            Duplicate product
+                                                        </a>
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item delete">
+                                                            <i class="i-con i-con-trash"><i></i></i>
+                                                            Delete product
+                                                        </a>
+                                                        </div>
+                                                    </td>
+                                                    <tr class="demo out collapse group-of-rows-1 subrow nohover"> 
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1 subrow-padding"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1 subrow-padding"><span>Dairy Khoury Labneh 400g</span></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow"><div class="collapse group-of-rows-1"></div></td>
+                                                        <td class="subrow-dark hiddenRow text-right"><div class="collapse group-of-rows-1 subrow-padding"><span>5,500</span></div></td>
+                                                        <td class="subrow-dark hiddenRow text-right"><div class="collapse group-of-rows-1 subrow-padding"><span>500</span></div></td>
+                                                        <td class="subrow-dark hiddenRow text-right"><div class="collapse group-of-rows-1 subrow-padding"><span>1.4%</span></div></td>
+                                                        <td class="subrow-dark hiddenRow text-right"><div class="collapse group-of-rows-1 subrow-padding"><span class="text-warning">34</span></div></td>
+                                                        <td class="subrow-dark hiddenRow text-right"><div class="collapse group-of-rows-1"></div></td>
+                                                    </tr>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <label class="md-check">
+                                                        <input type="checkbox" class="pt-4">
+                                                        <i class="blue"></i>
+                                                        </label>
+                                                    </td>
+                                                    <td>Dairy Khoury Labneh 250g</td>
+                                                    <td>Lebanese Food Company SARL</td>
+                                                    <td>SelfService/Dairy</td>
+                                                    <td class="text-right">115,500</td>
+                                                    <td class="text-right">2,500</td>
+                                                    <td class="text-right">14.4%</td>
+                                                    <td class="text-right">
+                                                        <span class="text-danger">-1</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                        <i class="i-con i-con-more"><i></i></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                        <a class="dropdown-item edit">
+                                                            <i class="la la-pen"></i>
+                                                            Edit Product
+                                                        </a>
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item create-order">
+                                                            <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                            class="icon reverse-icon" alt="">
+                                                            Create purchase order
+                                                        </a>
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item stock-adjust">
+                                                            <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                            alt="">
+                                                            Create Stock adjustment
+                                                        </a>
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item duplicate-product">
+                                                            <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                            Duplicate product
+                                                        </a>
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item delete">
+                                                            <i class="i-con i-con-trash"><i></i></i>
+                                                            Delete product
+                                                        </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <label class="md-check">
+                                                    <input type="checkbox" class="pt-4">
+                                                    <i class="blue"></i>
+                                                    </label>
+                                                </td>
+                                                <td>Sandwich</td>
+                                                <td>National Food Company</td>
+                                                <td>Food/flour</td>
+                                                <td class="text-right">5,500</td>
+                                                <td class="text-right">2,200</td>
+                                                <td class="text-right">11.4%</td>
+                                                <td class="text-right">
+                                                    <span class="text-warning">5.328</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                    <i class="i-con i-con-more"><i></i></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                    <a class="dropdown-item edit">
+                                                        <i class="la la-pen"></i>
+                                                        Edit Product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item create-order">
+                                                        <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                        class="icon reverse-icon" alt="">
+                                                        Create purchase order
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item stock-adjust">
+                                                        <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                        alt="">
+                                                        Create Stock adjustment
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item duplicate-product">
+                                                        <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                        Duplicate product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item delete">
+                                                        <i class="i-con i-con-trash"><i></i></i>
+                                                        Delete product
+                                                    </a>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <label class="md-check">
+                                                    <input type="checkbox" class="pt-4">
+                                                    <i class="blue"></i>
+                                                    </label>
+                                                </td>
+                                                <td>icecream</td>
+                                                <td>Icecream Company</td>
+                                                <td>Dairy</td>
+                                                <td class="text-right">5,400</td>
+                                                <td class="text-right">3,100</td>
+                                                <td class="text-right">12.9%</td>
+                                                <td class="text-right">
+                                                    <span>113</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                    <i class="i-con i-con-more"><i></i></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                    <a class="dropdown-item edit">
+                                                        <i class="la la-pen"></i>
+                                                        Edit Product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item create-order">
+                                                        <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                        class="icon reverse-icon" alt="">
+                                                        Create purchase order
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item stock-adjust">
+                                                        <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                        alt="">
+                                                        Create Stock adjustment
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item duplicate-product">
+                                                        <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                        Duplicate product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item delete">
+                                                        <i class="i-con i-con-trash"><i></i></i>
+                                                        Delete product
+                                                    </a>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <label class="md-check">
+                                                    <input type="checkbox" class="pt-4">
+                                                    <i class="blue"></i>
+                                                    </label>
+                                                </td>
+                                                <td>Dairy Khoury Labneh 400g</td>
+                                                <td>Lebanese Food Company SARL</td>
+                                                <td>SelfService/Dairy</td>
+                                                <td class="text-right">115,500</td>
+                                                <td class="text-right">2,500</td>
+                                                <td class="text-right">14.4%</td>
+                                                <td class="text-right">
+                                                    <span>89</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                    <i class="i-con i-con-more"><i></i></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                    <a class="dropdown-item edit">
+                                                        <i class="la la-pen"></i>
+                                                        Edit Product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item create-order">
+                                                        <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                        class="icon reverse-icon" alt="">
+                                                        Create purchase order
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item stock-adjust">
+                                                        <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                        alt="">
+                                                        Create Stock adjustment
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item duplicate-product">
+                                                        <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                        Duplicate product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item delete">
+                                                        <i class="i-con i-con-trash"><i></i></i>
+                                                        Delete product
+                                                    </a>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <label class="md-check">
+                                                    <input type="checkbox" class="pt-4">
+                                                    <i class="blue"></i>
+                                                    </label>
+                                                </td>
+                                                <td>Dairy Khoury Labneh 400g</td>
+                                                <td>Lebanese Food Company SARL</td>
+                                                <td>SelfService/Dairy</td>
+                                                <td class="text-right">115,500</td>
+                                                <td class="text-right">2,500</td>
+                                                <td class="text-right">14.4%</td>
+                                                <td class="text-right">
+                                                    <span>52</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                    <i class="i-con i-con-more"><i></i></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                    <a class="dropdown-item edit">
+                                                        <i class="la la-pen"></i>
+                                                        Edit Product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item create-order">
+                                                        <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                        class="icon reverse-icon" alt="">
+                                                        Create purchase order
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item stock-adjust">
+                                                        <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                        alt="">
+                                                        Create Stock adjustment
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item duplicate-product">
+                                                        <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                        Duplicate product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item delete">
+                                                        <i class="i-con i-con-trash"><i></i></i>
+                                                        Delete product
+                                                    </a>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <label class="md-check">
+                                                    <input type="checkbox" class="pt-4">
+                                                    <i class="blue"></i>
+                                                    </label>
+                                                </td>
+                                                <td>Sandwich</td>
+                                                <td>National Food Company</td>
+                                                <td>Food/Flour</td>
+                                                <td class="text-right">35,500</td>
+                                                <td class="text-right">6,500</td>
+                                                <td class="text-right">19.4%</td>
+                                                <td class="text-right">
+                                                    <span class="text-warning">35</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                    <i class="i-con i-con-more"><i></i></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                    <a class="dropdown-item edit">
+                                                        <i class="la la-pen"></i>
+                                                        Edit Product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item create-order">
+                                                        <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                        class="icon reverse-icon" alt="">
+                                                        Create purchase order
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item stock-adjust">
+                                                        <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                        alt="">
+                                                        Create Stock adjustment
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item duplicate-product">
+                                                        <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                        Duplicate product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item delete">
+                                                        <i class="i-con i-con-trash"><i></i></i>
+                                                        Delete product
+                                                    </a>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <label class="md-check">
+                                                    <input type="checkbox" class="pt-4">
+                                                    <i class="blue"></i>
+                                                    </label>
+                                                </td>
+                                                <td>Hamburger</td>
+                                                <td>National Food Company</td>
+                                                <td>Food/Flour</td>
+                                                <td class="text-right">3,500</td>
+                                                <td class="text-right">1,200</td>
+                                                <td class="text-right">15.4%</td>
+                                                <td class="text-right">
+                                                    <span class="text-warning">25</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                    <i class="i-con i-con-more"><i></i></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                    <a class="dropdown-item edit">
+                                                        <i class="la la-pen"></i>
+                                                        Edit Product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item create-order">
+                                                        <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                        class="icon reverse-icon" alt="">
+                                                        Create purchase order
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item stock-adjust">
+                                                        <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                        alt="">
+                                                        Create Stock adjustment
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item duplicate-product">
+                                                        <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                        Duplicate product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item delete">
+                                                        <i class="i-con i-con-trash"><i></i></i>
+                                                        Delete product
+                                                    </a>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <label class="md-check">
+                                                    <input type="checkbox" class="pt-4">
+                                                    <i class="blue"></i>
+                                                    </label>
+                                                </td>
+                                                <td>spaghetti</td>
+                                                <td>National Food Company</td>
+                                                <td>Food/Noodles</td>
+                                                <td class="text-right">14,200</td>
+                                                <td class="text-right">2,200</td>
+                                                <td class="text-right">2.4%</td>
+                                                <td class="text-right">
+                                                    <span class="text-warning">5</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                    <i class="i-con i-con-more"><i></i></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                    <a class="dropdown-item edit">
+                                                        <i class="la la-pen"></i>
+                                                        Edit Product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item create-order">
+                                                        <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                        class="icon reverse-icon" alt="">
+                                                        Create purchase order
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item stock-adjust">
+                                                        <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                        alt="">
+                                                        Create Stock adjustment
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item duplicate-product">
+                                                        <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                        Duplicate product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item delete">
+                                                        <i class="i-con i-con-trash"><i></i></i>
+                                                        Delete product
+                                                    </a>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <label class="md-check">
+                                                    <input type="checkbox" class="pt-4">
+                                                    <i class="blue"></i>
+                                                    </label>
+                                                </td>
+                                                <td>Dairy Khoury Labneh 400g</td>
+                                                <td>Lebanese Food Company SARL</td>
+                                                <td>SelfService/Dairy</td>
+                                                <td class="text-right">115,500</td>
+                                                <td class="text-right">2,500</td>
+                                                <td class="text-right">14.4%</td>
+                                                <td class="text-right">
+                                                    <span class="text-warning">5</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                    <i class="i-con i-con-more"><i></i></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                    <a class="dropdown-item edit">
+                                                        <i class="la la-pen"></i>
+                                                        Edit Product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item create-order">
+                                                        <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                        class="icon reverse-icon" alt="">
+                                                        Create purchase order
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item stock-adjust">
+                                                        <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                        alt="">
+                                                        Create Stock adjustment
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item duplicate-product">
+                                                        <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                        Duplicate product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item delete">
+                                                        <i class="i-con i-con-trash"><i></i></i>
+                                                        Delete product
+                                                    </a>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <label class="md-check">
+                                                    <input type="checkbox" class="pt-4">
+                                                    <i class="blue"></i>
+                                                    </label>
+                                                </td>
+                                                <td>Dairy Khoury Labneh 400g</td>
+                                                <td>Lebanese Food Company SARL</td>
+                                                <td>SelfService/Dairy</td>
+                                                <td class="text-right">115,500</td>
+                                                <td class="text-right">2,500</td>
+                                                <td class="text-right">14.4%</td>
+                                                <td class="text-right">
+                                                    <span class="text-warning">5</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                    <i class="i-con i-con-more"><i></i></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                    <a class="dropdown-item edit">
+                                                        <i class="la la-pen"></i>
+                                                        Edit Product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item create-order">
+                                                        <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                        class="icon reverse-icon" alt="">
+                                                        Create purchase order
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item stock-adjust">
+                                                        <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                        alt="">
+                                                        Create Stock adjustment
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item duplicate-product">
+                                                        <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                        Duplicate product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item delete">
+                                                        <i class="i-con i-con-trash"><i></i></i>
+                                                        Delete product
+                                                    </a>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <label class="md-check">
+                                                    <input type="checkbox" class="pt-4">
+                                                    <i class="blue"></i>
+                                                    </label>
+                                                </td>
+                                                <td>Dairy Khoury Labneh 400g</td>
+                                                <td>Lebanese Food Company SARL</td>
+                                                <td>SelfService/Dairy</td>
+                                                <td class="text-right">115,500</td>
+                                                <td class="text-right">2,500</td>
+                                                <td class="text-right">14.4%</td>
+                                                <td class="text-right">
+                                                    <span class="text-warning">5</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                    <i class="i-con i-con-more"><i></i></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                    <a class="dropdown-item edit">
+                                                        <i class="la la-pen"></i>
+                                                        Edit Product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item create-order">
+                                                        <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                        class="icon reverse-icon" alt="">
+                                                        Create purchase order
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item stock-adjust">
+                                                        <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                        alt="">
+                                                        Create Stock adjustment
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item duplicate-product">
+                                                        <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                        Duplicate product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item delete">
+                                                        <i class="i-con i-con-trash"><i></i></i>
+                                                        Delete product
+                                                    </a>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <label class="md-check">
+                                                    <input type="checkbox" class="pt-4">
+                                                    <i class="blue"></i>
+                                                    </label>
+                                                </td>
+                                                <td>Dairy Khoury Labneh 400g</td>
+                                                <td>Lebanese Food Company SARL</td>
+                                                <td>SelfService/Dairy</td>
+                                                <td class="text-right">115,500</td>
+                                                <td class="text-right">2,500</td>
+                                                <td class="text-right">14.4%</td>
+                                                <td class="text-right">
+                                                    <span class="text-warning">5</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                    <i class="i-con i-con-more"><i></i></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                    <a class="dropdown-item edit">
+                                                        <i class="la la-pen"></i>
+                                                        Edit Product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item create-order">
+                                                        <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                        class="icon reverse-icon" alt="">
+                                                        Create purchase order
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item stock-adjust">
+                                                        <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                        alt="">
+                                                        Create Stock adjustment
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item duplicate-product">
+                                                        <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                        Duplicate product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item delete">
+                                                        <i class="i-con i-con-trash"><i></i></i>
+                                                        Delete product
+                                                    </a>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <label class="md-check">
+                                                    <input type="checkbox" class="pt-4">
+                                                    <i class="blue"></i>
+                                                    </label>
+                                                </td>
+                                                <td>Dairy Khoury Labneh 400g</td>
+                                                <td>Lebanese Food Company SARL</td>
+                                                <td>SelfService/Dairy</td>
+                                                <td class="text-right">115,500</td>
+                                                <td class="text-right">2,500</td>
+                                                <td class="text-right">14.4%</td>
+                                                <td class="text-right">
+                                                    <span class="text-warning">5</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="#" data-toggle="dropdown" class="text-muted a-more">
+                                                    <i class="i-con i-con-more"><i></i></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right bg-dark" role="menu">
+                                                    <a class="dropdown-item edit">
+                                                        <i class="la la-pen"></i>
+                                                        Edit Product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item create-order">
+                                                        <img src="../assets/img/animated-icons/create-order/create-order.svg"
+                                                        class="icon reverse-icon" alt="">
+                                                        Create purchase order
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item stock-adjust">
+                                                        <img src="../assets/img/animated-icons/adjust/adjust.svg" class="icon reverse-icon"
+                                                        alt="">
+                                                        Create Stock adjustment
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item duplicate-product">
+                                                        <img src="../assets/img/flaticons/copy.svg" class="icon reverse-icon" alt="">
+                                                        Duplicate product
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item delete">
+                                                        <i class="i-con i-con-trash"><i></i></i>
+                                                        Delete product
+                                                    </a>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="import-modal" class="modal fade">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="carousel slide" id="import-modal-carousel" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="modal-header border-0">
+                                            <h5 class="modal-title">Import Products by CSV</h5>
+                                        </div>
+                                        <div class="modal-body p-lg">
+                                            <div class="row">
+                                                <p class="px-3">Download a <a href="#">sample CSV template</a> to see an
+                                                    example of the format required.
+                                                </p>
+                                                <div class="col-12 animation-icon">
+                                                    <form action="http://agiletemplate.herokuapp.com/products/api/dropzone"
+                                                          class="dropzone white b-a b-dashed b-secondary rounded text-center p-0"
+                                                          data-plugin="dropzone"
+                                                          data-option="{url: '../assets/api/dropzone'}">
+                                                        <div class="dz-message">
+                                                            <h4
+                                                                    class="my-4 d-flex align-items-center justify-content-center">
+                                                                <div class="d-flex align-items-center mr-2">
+                                                                    <img src="../assets/img/animated-icons/upload-to-cloud/upload-to-cloud_200.gif"
+                                                                         class="play icon-lg" alt=""
+                                                                         style="height: 80px; width: auto;">
+                                                                    <img src="../assets/img/animated-icons/upload-to-cloud/upload-to-cloud.svg"
+                                                                         class="stop icon-lg" alt=""
+                                                                         style="height: 80px; width: auto;">
+                                                                </div>
+                                                                <h4>Drag your file here to upload</h4>
+    
+                                                            </h4>
+                                                            <span>or click to browse</span>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-12 d-flex mt-3 justify-content-between">
+                                                    <p class="text-muted">Overwrite any current product that have the same handle. Existing values will be used for any missing columns</p>
+                                                    <span>
+                                                        <label class="ui-switch ui-switch-md">
+                                                            <input type="checkbox" id="switch">
+                                                            <i></i>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer border-0 d-block">
+                                            <div class="text-right">
+                                                <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Cancel</button>
+                                                <a role="button" class="btn btn-primary carousel-control" href="#import-modal-carousel"
+                                                   data-slide="next">Upload & continue</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="modal-header border-0">
+                                            <h5 class="modal-title">Preview your first product</h5>
+                                        </div>
+                                        <div class="modal-body p-lg">
+                                            <div class="row">
+                                                <p class="px-3">You will be importing approximately <b>12 products</b> with a total of <b>12 Contact
+                                                    names</b> and <b>12 VAT #</b>. Importing will <span class="overwrite font-weight-bold">not overwrite any existing 
+                                                    products</span> that have the same product handle.</p>
+                                                <div class="col-12">
+                                                    <div class="border p-3 rounded">
+                                                        <div class="row" style="font-size: 14px;">
+                                                            <div class="col-12 mb-4 d-flex align-items-center">
+                                                                <div class="rounded w-64 bg-success-lt d-flex align-items-center justify-content-center">
+                                                                        <span class="text-success"
+                                                                              style="font-size: 20px;">T</span>
+                                                                </div>
+                                                                <div class="row ml-3" style="width: -webkit-fill-available;">
+                                                                <div class="col-md-8 col-sm-6">
+                                                                    <p class="mb-1 text-dark" style="font-size: 14px;">
+                                                                        <b>Dairy Khoury Ayran 250g</b>
+                                                                    </p>
+                                                                    <span style="font-size: 11px;">Title (English)</span>
+                                                                </div>
+                                                                <div class="col-md-4 col-sm-6 text-right">
+                                                                    <p class="mb-1 text-dark" style="font-size: 14px;">
+                                                                        <b>مثلا. ديري خوري عيران 250"</b>
+                                                                    </p>
+                                                                    <span style="font-size: 11px;">Title (Arabic)</span>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4 mb-3">
+                                                                <p class="mb-0 text-dark" style="font-size: 14px;">
+                                                                    <b>Lebanese Food Company</b>
+                                                                </p>
+                                                                <span style="font-size: 11px;">Supplier</span>
+                                                            </div>
+                                                            <div class="col-4 mb-3">
+                                                                <p class="mb-0 text-dark" style="font-size: 14px;">
+                                                                    <b>L£ 122,500</b>
+                                                                </p>
+                                                                <span style="font-size: 11px;">Price</span>
+                                                            </div>
+                                                            <div class="col-4 mb-3 text-right">
+                                                                <p class="mb-0 text-dark" style="font-size: 14px;">
+                                                                    <b>5289630108921</b>
+                                                                </p>
+                                                                <span style="font-size: 11px;">Barcode</span>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <p class="mb-0 text-dark" style="font-size: 14px;"><b>Self Service / Beverages</b></p>
+                                                                <span style="font-size: 11px;">Category</span>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <p class="mb-0 text-dark" style="font-size: 14px;"><b>Each</b></p>
+                                                                <span style="font-size: 11px;">Unit</span>
+                                                            </div>
+                                                            <div class="col-4 text-right">
+                                                                <p class="mb-0 text-dark" style="font-size: 14px;">
+                                                                    <b>SKU 345-091</b>
+                                                                </p>
+                                                                <span style="font-size: 11px;">SKU</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer border-0 d-block">
+                                            <a role="button" href="#import-modal-carousel" class="btn btn-secondary float-left carousel-control mb-3"
+                                               data-slide="prev">
+                                                <i class="i-con i-con-left"></i> Go back</a>
+                                            <a id="import-product-start" role="button"
+                                               class="btn btn-primary float-right right carousel-control" href="#import-modal-carousel"
+                                               data-slide="next">Import products</a>
+                                            <button type="button" class="btn btn-secondary float-right"
+                                                    data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="modal-header border-0">
+                                            <h5 class="modal-title">Product import in progress</h5>
+                                        </div>
+                                        <div class="modal-body p-lg">
+                                            <div class="row d-flex flex">
+                                                <div class="col-12"><br></div>
+                                                <div class="col-12">
+                                                    <p><b>We're currently importing your products into your store’s back
+                                                        office.</b></p>
+                                                    <p>This could take some time to complete. If you'd like, you can close this dialog box and continue working.
+                                                    </p>
+                                                    <div class="progress my-2">
+                                                        <div class="progress-bar bg-success" style="width: 0%"></div>
+                                                    </div>
+                                                    <span class="progress-bar-percent"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer border-0 d-block">
+                                            <div class="text-right">
+                                                <button type="button" class="btn btn-secondary mb-3"
+                                                        data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                </div>
+    
+                <div id="delete-modal" class="modal fade" data-backdrop="true" data-plugin="notie" data-dismiss="modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title">Delete 1 product</h5>
+                            </div>
+                            <div class="modal-body p-lg">
+                                Are you sure about it? This can’t be undone.
+                            </div>
+                            <div class="modal-footer border-0">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-danger" id="btn-delete" data-dismiss="modal">Delete</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div>
+                </div>
+    
+                <div id="multi-delete-modal" class="modal fade" data-backdrop="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title" id="modal-multi-title"></h5>
+                            </div>
+                            <div class="modal-body p-lg" id="body-title"></div>
+                            <div class="modal-footer border-0">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-danger" id="btn-delete-confirm">Delete</button>
+                                <input type="hidden" id="selected-cnt" value="">
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+<script src="../libs/jquery/dist/jquery.min.js"></script>
+<script src="../../code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script src="../libs/select2/dist/js/select2.min.js"></script>
+<script src="../assets/js/plugins/select2.js"></script>
+<script src="../assets/foundation/foundation-datepicker.js"></script>
+<script src="../assets/js/bootstrap-select.js"></script>
+<!-- Bootstrap -->
+<script src="../libs/popper.js/dist/umd/popper.min.js"></script>
+<script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- ajax page -->
+<script src="../libs/pace-progress/pace.min.js"></script>
+<script src="../libs/pjax/pjax.js"></script>
+<script src="../assets/js/ajax.js"></script>
+<!-- lazyload plugin -->
+<script src="../assets/js/lazyload.config.js"></script>
+<script src="../assets/js/lazyload.js"></script>
+<script src="../assets/js/plugin.js"></script>
+<!-- theme -->
+<script src="../assets/js/autoNumeric-1.8.3.js"></script>
+<script src="../assets/js/theme.js"></script>
+<!-- dropzone -->
+
+<script src="../libs/dropzone/dist/min/dropzone.min.js"></script>
+<script src="../libs/bootstrap-table/dist/bootstrap-table.min.js"></script>
+<script src="../libs/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile.min.js"></script>
+<script src="../libs/bootstrap-table/dist/extensions/export/bootstrap-table-export.min.js"></script>
+<script src="../assets/js/plugins/tableExport.min.js"></script>
+
+<script src="../assets/js/jquery.email.multiple.js"></script>
+<script src="../assets/js/input-mask.js"></script>
+<script src="../assets/js/common.js"></script>
+<script type="text/javascript" src="../../cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="../../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).on('click', '.nav-text', (e) => {
+        let cur_el = e.target,
+            parent_li = $(cur_el).closest('li');        
+        if(parent_li.hasClass('main-nav')) {
+            $(".nav li").removeClass("active"); //Remove any "active" class 
+        }      
+
+        
+    });
+    $(document).ready(function () {
+        if($(window).width() < 768)
+        {
+            $('#search-text').attr("placeholder", "Search ...");
+            $('#search-bar').css("padding-left", "0px");
+            $('#search-text').css("width", "200px");
+        }
+        else
+        {
+            $('#search-text').attr("placeholder", "Search inventory, suppliers, invoice, receipt, customers, employees, etc…");
+            $('#search-bar').css("padding-left", "40px");
+            $('#search-text').css("width", "500px");
+        }
+        $('#products_nav').click(function() {
+
+        });
+    });
+    $(window).resize(function() {
+        if($(window).width() < 768)
+        {
+            $('#search-text').attr("placeholder", "Search ...");
+            $('#search-bar').css("padding-left", "0px");
+            $('#search-text').css("width", "200px");
+        }
+        else
+        {
+            $('#search-text').attr("placeholder", "Search inventory, suppliers, invoice, receipt, customers, employees, etc…");
+            $('#search-bar').css("padding-left", "40px");
+            $('#search-text').css("width", "500px");
+        }
+    });
+</script>    <footer class="d-none">
+        <link rel="stylesheet" href="../assets/css/office/products.all.css" />
+        <style>
+            .top-check {
+                padding-left: 0.25rem;
+            }
+
+            a.a-more:hover {
+                color: #137eff !important;
+            }
+
+            .dropdown-item img {
+                margin-left: -0.5rem;
+            }
+
+            img.reverse-icon {
+                -webkit-filter: invert(100%);
+                /* safari 6.0 - 9.0 */
+                filter: invert(100%);
+            }
+            .hiddenRow {
+                padding: 2 !important;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+                document.title = "Products | All Products";
+                $(".nav li ").removeClass("active"); //Remove any "active" class 
+                $('#products_nav').addClass('active');
+                $('#products_all').addClass('active');
+                (function ($) {
+                    $('#custom-search-box').keyup(function () {
+                        var rex = new RegExp($(this).val(), 'i');
+                        $('.searchable tr').hide();
+                        $('.searchable tr').filter(function () {
+                            return rex.test($(this).text());
+                        }).show();
+                    })
+                }(jQuery));
+            });
+        </script>
+        <script src="../assets/js/office/products.all.js"></script>
+        <script src="../assets/js/office/carousel.animate.js"></script>
+        <script src="../assets/js/tags.js"></script>
+    </footer>
+</body>
+
+
+<!-- Mirrored from agiletemplate.herokuapp.com/products/products_all by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Apr 2021 16:53:20 GMT -->
+</html>

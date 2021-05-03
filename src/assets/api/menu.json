@@ -1,0 +1,40 @@
+{
+        "id": "1",
+        "name": "Taanayel Laban 500g",
+        "sku": "SKU 23623",
+        "barcode": "7457437585",
+        "vat": "VAT 11%",
+        "type": "each",
+        "stock": "12",
+        "destination_stock": "0"
+    },
+    {
+        "id": "2",
+        "name": "Second Laban 500g",
+        "sku": "SKU 23516",
+        "barcode": "9285728329",
+        "vat": "",
+        "type": "each",
+        "stock": "12",
+        "destination_stock": "0"
+    },
+    {
+        "id": "3",
+        "name": "Third Laban 500g",
+        "sku": "SKU 20385",
+        "barcode": "1068493058",
+        "vat": "VAT 11%",
+        "type": "weight",
+        "stock": "12",
+        "destination_stock": "0"
+    },
+    {
+        "id": "4",
+        "name": "Fourth Laban 500g",
+        "sku": "SKU 40358",
+        "barcode": "7384769283",
+        "vat": "VAT 11%",
+        "type": "weight",
+        "stock": "12.234",
+        "destination_stock": "0.000"
+    }
