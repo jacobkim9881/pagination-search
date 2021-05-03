@@ -1,0 +1,32 @@
+{
+  "name": "SBO",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "node ./src/index.js",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobkim9881/pagination-search.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobkim9881/pagination-search/issues"
+  },
+  "homepage": "https://github.com/jacobkim9881/pagination-search#readme",
+  "devDependencies": {
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "glob": "^7.1.6",
+    "html-webpack-plugin": "^5.3.1",
+    "http-server": "^0.12.3"
+  }
+}
