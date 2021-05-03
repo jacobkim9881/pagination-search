@@ -100,13 +100,13 @@ var MODULE_CONFIG = {
     prefix + '/assets/js/plugins/typeahead.js'
   ],
   datepicker: [
-    "/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
-    "/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css",
+    prefix + "/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
+    prefix + "/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css",
   ],
   daterangepicker: [
-    "/libs/daterangepicker/daterangepicker.css",
+    prefix + "/libs/daterangepicker/daterangepicker.css",
     prefix + '/libs/moment/min/moment-with-locales.min.js',
-    "/libs/daterangepicker/daterangepicker.js"
+    prefix + "/libs/daterangepicker/daterangepicker.js"
   ],
   fullCalendar: [
     prefix + '/libs/moment/min/moment-with-locales.min.js',
