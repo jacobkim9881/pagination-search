@@ -6,6 +6,21 @@
 * @website: http://www.daterangepicker.com/
 */
 // Following the UMD template https://github.com/umdjs/umd/blob/master/templates/returnExportsGlobal.js
+            function update_DateRange(label, startDate, endDate) {
+              $('.date-range').trigger('click');
+              $('.daterangepicker').css("display", "none");
+              if(label == "Today" || label == "Yesterday") $('.d-range').text(label);
+              else if(label == "Custom Range") {
+                var sDate = startDate.split(' '), eDate = endDate.split(' ');
+                if(sDate[3] == eDate[3]) $('.d-range').text(`${sDate[1]} ${sDate[2]} - ${eDate[1]} ${eDate[2]}`);
+                else $('.d-range').text(`${sDate[1]} ${sDate[2]} ${sDate[3]} - ${eDate[1]} ${eDate[2]} ${eDate[3]}`);
+              } else {
+                var sDate = startDate.split(' '), eDate = endDate.split(' ');
+                $('.d-range').text(`${sDate[1]} ${sDate[2]} - ${eDate[1]} ${eDate[2]}`);
+              }
+            }
+
+
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Make globaly available as well
