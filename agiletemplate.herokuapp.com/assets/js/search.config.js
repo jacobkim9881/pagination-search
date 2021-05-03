@@ -160,3 +160,5 @@ var MODULE_OPTION_CONFIG = {
     errorsWrapper: '<ul class="list-unstyled text-sm mt-1 text-muted"></ul>'
   }
 }
+
+module.exports = MODULE_CONFIG
